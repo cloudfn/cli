@@ -1,0 +1,21 @@
+{
+  "name": "cloudfn-cli",
+  "version": "0.0.1",
+  "description": "command-line interface to the cloudfn service",
+  "main": "index.js",
+  "keywords": [
+    "cloudfn",
+    "cli"
+  ],
+  "author": "Jørgen Skogmo <js@base.io> (http://base.io/)",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "chalk": "^1.1.3",
+    "glob": "^7.0.6",
+    "mkdirp": "^0.5.1",
+    "moment": "^2.15.0",
+    "request": "^2.78.0"
+  },
+  "devDependencies": {}
+}
