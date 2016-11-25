@@ -156,6 +156,8 @@ var Tasks = {
 
 		Tasks.list[user] = Tasks.list[user] || {};
 	    Tasks.list[user][script] = {
+	    	enabled: true,
+	    	created_at: new Date().toISOString(), //moment().toISOString()
 	    	code: jscode,
 	    	fn: (req, res) => {
 		        console.log( 'Calling', req.method, req.url );

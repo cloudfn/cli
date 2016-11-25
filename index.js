@@ -37,9 +37,12 @@ var remote  	= 'https://cloudfn.stream';
 // $ cfn logs appname			: Opens a websocket and subscribes to (streaming) logs (pubsub) for the provided appname
 
 // Premium (PLANNING)
-// Premium features can be enabled by setting a flag on the account (on the server)
+// Premium features can be enabled by setting a flag on the server user account
 // $ cfn pack 					: upload (and remotely run package.json --> custom modules)
 // $ cfn set $app $config 		: set api.env vars
+// Additional:
+// - allow simple fs usage, via api.fs: E.g: api.fs.read(path), api.fs.write(path, data). Both sync, and both "jailed" to appdir
+
 
 // Admin (PLANNING)
 // Admin features can be enabled by setting a flag on the account (on the server)
