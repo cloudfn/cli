@@ -14,8 +14,10 @@ var hashObject  = require('hash-object');
 
 var pkg     	= require('./package.json');
 
-//var cloudfn 	= require('../cloudfn-system/lib.cloudfn.js');
-var cloudfn 	= require('./lib.cloudfn.js');
+var cloudfn 	= require('../cloudfn-system/lib.cloudfn.js');
+if( !cloudfn ) cloudfn = require('./lib.cloudfn.js');
+
+console.log("Using lib.cloundfn v."+ cloudfn.version() );
 
 var remote  	= 'http://localhost:3033';
 var remote  	= 'https://cloudfn.stream';
@@ -24,6 +26,7 @@ var remote  	= 'https://cloudfn.stream';
 
 // $ cfn add scriptfile 		: Uploads the script to the server, returns url
 // $ cfn test scriptfile json 	: Verifies and runs the script locally (TODO:How to use the same api/context? Local server?)
+// $ cfn rm scriptfile 			: Removes the script from the server
 // $ cfn ls 					: Lists scripts/apps for the user
 // $ cfn token 					: Utility to help generate unique strings (which the user can use in their api.auth() calls)
 // $ cfn user 					: Creates and Updates user credentials/accounts
@@ -62,6 +65,7 @@ var credentialFileLocations = [
 commander
   .version(pkg.name +" v."+ pkg.version +", using lib.cloudfn "+ cloudfn.version() )
   .option('add <scriptfile>' , 'Add scriptfile to the cloud', _add)
+  .option('rm <function>', 'Remove function', _rm)
   .option('ls', 'List active functions', _ls)
   .option('user' , 'Account/Credentials management', _user)
   .option('test <scriptfile> [JSON]' , 'Test scriptfile locally', _test)
@@ -88,7 +92,12 @@ function _call( endpoint ){
 }
 
 function _callp( endpoint ){
-	request.post({url:endpoint, formData:{a:1,b:"two",c:0.5}}, (err, httpResponse, body) => {
+
+	var url = remote + path.join('/', endpoint);
+	var data = {a:1,b:"two",c:0.5};
+	console.log('@callp url', url, 'with (sample) data:', {a:1,b:"two",c:0.5});
+
+	request.post({url:url, formData:data}, (err, httpResponse, body) => {
 		if( err || !httpResponse ){
 			console.log( chalk.red("Network error"));
 			console.log(err, httpResponse);
@@ -190,6 +199,23 @@ function _ls(){
 		});
 	});
 }
+
+/// Remove function
+function _rm( functionName ){
+	prepareSecureRequest( (userconfig, hash) => {
+		var url = [remote, 'rm', userconfig.username, hash].join('/');
+		var formData = {name:functionName};
+		console.log('@rm url', url); 
+		request.post({url:url, formData: formData}, (err, httpResponse, body) => {
+			parse_net_response(err, httpResponse, body, (body) => {
+				//TODO: format output
+				console.log("Registered functions:");
+				console.dir(body.data);
+			});
+		});
+	});
+}
+
 
 /// User management
 /// Purpose: 

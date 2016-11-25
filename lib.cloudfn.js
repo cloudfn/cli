@@ -1,17 +1,15 @@
 // js@base.io
 
-const VERSION 	= 'Rev. 5';
+const VERSION 		= '0.0.1-r8';
+const TASKDIRECTORY = 'tasks';
 
-const fs      	= require('fs');
-const path      = require('path');
-const chalk     = require('chalk');
-const mkdirp    = require('mkdirp');
-const glob      = require('glob');
+const fs 			= require('fs');
+const path 			= require('path');
 
 module.exports.version = () => VERSION;
 
-/// This script is shared between the CLI- and Server-app - ALWAYS work on the cloudfn-system version,
-/// the deploy script in ../cloudfn-cli will copy it in 
+/// This script is shared between the CLI- and Server-app - ALWAYS work on the file in cloudfn-system repo,
+/// the deploy.sh script in ../cloudfn-cli will copy it in 
 
 
 
@@ -51,7 +49,19 @@ const Utils = {
 			str += ' ';
 		}
 		return str;
+	},
+
+	mkdirp: (filepath) => {
+		const targetDir = filepath;
+		targetDir.split('/').forEach((dir, index, splits) => {
+			const parent = splits.slice(0, index).join('/');
+			const dirPath = path.resolve(parent, dir);
+			if (!fs.existsSync(dirPath)) {
+				fs.mkdirSync(dirPath);
+			}
+		})
 	}
+
 }
 module.exports.utils = Utils;
 
@@ -93,20 +103,20 @@ module.exports.verify = Verify;
 /// Store
 
 const Store = {
-	init: (path) => {
-		var filename = "./tasks/"+ path +"/store.json";
+	init: (filepath) => {
+		var filename = path.join( __dirname, TASKDIRECTORY, filepath, 'store.json');
 		if( !Utils.is_readable(filename, true) ){
 			fs.writeFileSync( filename, '{}' );
 		}
 	},
 
-	save: (path, data) => {
-		var filename = "./tasks/"+ path +"/store.json";
+	save: (filepath, data) => {
+		var filename = path.join( __dirname, TASKDIRECTORY, filepath, 'store.json');
 		fs.writeFileSync( filename, JSON.stringify(data, null, '  ') );
 	},
 
-	read: (path) => {
-		var filename = "./tasks/"+ path +"/store.json";
+	read: (filepath) => {
+		var filename = path.join( __dirname, TASKDIRECTORY, filepath, 'store.json');
 		return JSON.parse( fs.readFileSync(filename).toString() ) || {};
 	}
 }
@@ -118,43 +128,40 @@ module.exports.store = Store;
 var Tasks = {
 	list: {},
 
-	add: (expressApp, user, script, tmpfile, cb) => {
+	add: (user, script, tmpfile, cb) => {
 		let code     = fs.readFileSync( tmpfile ).toString();
 		let safecode = Sandbox.create(code);
 		let jscode   = Verify.compile( safecode );
 
 		Sandbox.restore();
 
-        if( !jscode ) return cb(false);
+		if( !jscode ) return cb(false);
 
-        var filepath  = path.join(__dirname, 'tasks', user, script);
-        //console.log({user, script, filepath});
+		var filepath  = path.join(__dirname, TASKDIRECTORY, user, script);
+		console.log({user, script, filepath});
 
-        mkdirp(filepath, function (err) {
-            if (err) return cb(false);
+		Utils.mkdirp( filepath );
+		fs.writeFileSync( path.join(filepath, 'index.js'), safecode);
+		cb( Tasks.mount(user, script, jscode) );
+	},
 
-            fs.writeFileSync( path.join(filepath, 'index.js'), safecode);
-
-            cb( Tasks._mount(expressApp, user, script, jscode) );
-        });
+	remove: (user, script) => {
+		console.log("@task.remove:", user, script, Tasks.list[user][script] );
+		delete Tasks.list[user][script];
 	},
 
 	mount: (user, script, jscode) => {
 
 		Store.init( user+'/'+script );
 
-		Tasks.list[user]                 = Tasks.list[user] || {};
-	    Tasks.list[user][script]         = Tasks.list[user][script] || {};
-	    Tasks.list[user][script].code    = jscode;
-	    Tasks.list[user][script].fn      = function(req, res){
-	        
-	        console.log( chalk.green('Calling'), req.method, req.url );
-
-	        let dataroot = user+'/'+script;
-	        Runner.task( Tasks.list[user][script].code, req, res, dataroot);
-	    };
-
-        console.dir(Tasks.list, {colors:true});
+		Tasks.list[user] = Tasks.list[user] || {};
+	    Tasks.list[user][script] = {
+	    	code: jscode,
+	    	fn: (req, res) => {
+		        console.log( 'Calling', req.method, req.url );
+		        Runner.task( Tasks.list[user][script].code, req, res, user+'/'+script);
+		    }
+		};
 	    return true;
 	}
 
@@ -189,18 +196,17 @@ const Runner = {
 
 		//console.log("@run()", typeof jscode, jscode, args);
 		//console.log("@run()", scriptname, args);
-		console.log(chalk.blue( JSON.stringify({action:'run', 'script':scriptname, args:args}, null, ' ')));
+		console.dir({action:'@Runner.run', 'script':scriptname, args:args}, {colors:true});
 
 		try {
 			jscode( API.create(args) );
 		}catch(e){
-			console.log( chalk.red("Script error:"), e.toString());
+			console.log( "Script error:", e.toString() );
 		}
 		Sandbox.restore();
 
 		var hrend = process.hrtime(hrstart);
-		console.log( chalk.grey("@run complete %ds %dms"), hrend[0], hrend[1]/1000000);
-		console.log("#0 here");
+		console.log( "Script execution completed in %ds %dms", hrend[0], hrend[1]/1000000);
 	},
 
 	task: (task, req, res, dataroot) => {
@@ -214,13 +220,13 @@ const Runner = {
 		try {
 			task( context );
 		}catch(e){
-			console.log( chalk.red("Script error:"), e.toString());
+			console.log( "Script error:", e.toString() );
 		}
 
 		Sandbox.restore();
 
 		var hrend = process.hrtime(hrstart);
-		console.log( chalk.blue("@exec "+ req.url +" completed in %ds %dms"), hrend[0], hrend[1]/1000000);
+		console.log( "Script execution completed in %ds %dms (%s)", hrend[0], hrend[1]/1000000, req.url);
 	}
 }
 module.exports.run = Runner;
@@ -359,11 +365,17 @@ const Sandbox = {
 
 	clean: function(){
 		console.log("@sandbox clean()");
+	    
 	    var keep_process = ['nextTick', '_tickCallback', 'stdout', 'console', 'hrtime', 'emitWarning', 'env'];
-	    var keep_this = ['console', 'process', 'Buffer', 'setImmediate'];
+	    var env_bak = this.process.env;
 	    Object.keys(this.process).map( (key) => {
 	        if( keep_process.indexOf(key) < 0 ) delete this.process[key];
 	    });
+	    /// PM2 relies on env.MODULE_DEBUG
+	    this.process.env = {MODULE_DEBUG:env_bak.MODULE_DEBUG};
+
+
+	    var keep_this = ['console', 'process', 'Buffer', 'setImmediate'];
 	    Object.keys(this).map( (key) => {
 	        if( keep_this.indexOf(key) < 0 ) delete this[key];
 	    });
