@@ -2,7 +2,10 @@
 
 VERSION="$(node -pe 'require("./package.json").version')"
 
-git add --all .
+[ -f "./lib.cloudfn.js" ] && rm "./lib.cloudfn.js"
+cp "../cloudfn-system/lib.cloudfn.js" .
+
+git add .
 git commit -a -m "$VERSION" --quiet
 git push origin master --quiet
 npm version patch

@@ -14,10 +14,11 @@ var hashObject  = require('hash-object');
 
 var pkg     	= require('./package.json');
 
-var cloudfn 	= require('../cloudfn-system/lib.cloudfn.js');
+//var cloudfn 	= require('../cloudfn-system/lib.cloudfn.js');
+var cloudfn 	= require('./lib.cloudfn.js');
 
-//var remote  	= 'https://cloudfn.stream';
 var remote  	= 'http://localhost:3033';
+var remote  	= 'https://cloudfn.stream';
 
 // Features
 
@@ -72,7 +73,11 @@ commander
 
 
 function _call( endpoint ){
-	request.get(endpoint, (err, httpResponse, body) => {
+
+	var url = remote + path.join('/', endpoint);
+	console.log('@call url', url);
+
+	request.get(url, (err, httpResponse, body) => {
 		if( err || !httpResponse ){
 			console.log( chalk.red("Network error"));
 			console.log(err, httpResponse);
