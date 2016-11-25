@@ -1,6 +1,6 @@
 // js@base.io
 
-const VERSION 	= 'Rev. 4';
+const VERSION 	= 'Rev. 5';
 
 const fs      	= require('fs');
 const path      = require('path');
@@ -10,8 +10,8 @@ const glob      = require('glob');
 
 module.exports.version = () => VERSION;
 
-/// The complete cloudfn service code library,
-/// shared between the CLI- and Server-app. 
+/// This script is shared between the CLI- and Server-app - ALWAYS work on the cloudfn-system version,
+/// the deploy script in ../cloudfn-cli will copy it in 
 
 
 
