@@ -16,7 +16,6 @@ var pkg     	= require('./package.json');
 
 var cloudfn 	= require('../cloudfn-system/lib.cloudfn.js');
 
-
 //var remote  	= 'https://cloudfn.stream';
 var remote  	= 'http://localhost:3033';
 
