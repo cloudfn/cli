@@ -4,6 +4,7 @@ const VERSION 		= '0.0.1-r8';
 const TASKDIRECTORY = 'tasks';
 
 const fs 			= require('fs');
+const os 			= require('os');
 const path 			= require('path');
 
 module.exports.version = () => VERSION;
@@ -12,6 +13,90 @@ module.exports.version = () => VERSION;
 /// the deploy.sh script in ../cloudfn-cli will copy it in 
 
 
+/// Users
+
+const Users = {
+	_usersfile: __dirname + '/users.json',
+	/*
+	{
+	    'js': {
+	        username: 'js',
+	        email: 'js@base.io',
+	        hash: '5d63e4a1ceeb6a83f8a3ef8f85e09955dcc4ecb75ba6e3bca376a5c502023ea0',
+	        p: true,
+	    },
+	}
+	*/
+	list: {},
+	load: () => {
+		Users.list = JSON.parse(fs.readFileSync(Users._usersfile).toString() );
+		console.dir( Users.list );
+		return Users.list;
+	},
+	save: () => {
+		fs.writeFileSync(Users._usersfile, JSON.stringify(Users.list, null, '    '));
+	},
+	get: () => {
+		return Users.list;
+	},
+	set: (username, data) => {
+		Users.list[username] = data;
+		Users.save();
+	},
+	exists: (username) => {
+		return Object.keys( Users.list).indexOf(username) > -1;
+	},
+	verify: (username, hash) => {
+		//console.log("@users.verify username, hash, users[username].hash)
+		var usr = Users.list[username];
+		return usr ? usr.hash === hash : false;
+	},
+	is_premium: (username) => {
+		var usr = Users.list[username];
+		console.log("@users.premium?", username, usr.premium );
+		return usr ? usr.premium : false;
+	},
+
+	cli: {
+		_credentialFileName: '.cloudfn',
+		_credentialFileLocations: () => {
+			return [
+				//path.join(__dirname, credentialFileName),
+				path.join( os.homedir(), Users.cli._credentialFileName),
+				//path.join( process.cwd(), credentialFileName)
+			]
+		},
+		_local: {},
+		load:() => {
+			var obs  = [];
+			var cfg  = {username:'', email:''};
+			var file = Users.cli._credentialFileLocations()[0];
+			/// Note: For now, lets use ONE config file. Maybe in the future we can allow multiple (like git)
+			//Users.cli._credentialFileLocations.map( (file) => {
+				if( Utils.is_readable(file) ){
+					var o = JSON.parse( fs.readFileSync(file).toString() );
+					obs.push( o );
+					cfg = Object.assign(cfg, o);
+				}
+			//});
+			Users.cli.local = cfg;
+			console.log("@users.cli.load: Users.cli.local:", Users.cli.local);
+			console.dir(Users.cli.local, {colors:true});
+		},
+		save: () => {
+			/// Note: For now, lets use ONE config file. Maybe in the future we can allow multiple (like git)
+			fs.writeFileSync( Users.cli._credentialFileLocations()[0], JSON.stringify(Users.cli.local, null, "  "));
+		},
+		get:() => { // was: getCredentials()
+			return Users.cli.local;
+		},
+		set:( data ) => {
+			Users.cli.local = Object.assign(Users.cli.local, data);
+			Users.cli.save();
+		}
+	}
+}
+module.exports.users = Users;
 
 
 /// Utils
@@ -161,7 +246,7 @@ var Tasks = {
 	    	code: jscode,
 	    	fn: (req, res) => {
 		        console.log( 'Calling', req.method, req.url );
-		        Runner.task( Tasks.list[user][script].code, req, res, user+'/'+script);
+		        Runner.task( Tasks.list[user][script].code, req, res, user, script);
 		    }
 		};
 	    return true;
@@ -211,13 +296,13 @@ const Runner = {
 		console.log( "Script execution completed in %ds %dms", hrend[0], hrend[1]/1000000);
 	},
 
-	task: (task, req, res, dataroot) => {
+	task: (task, req, res, user, script) => {
 
 		var ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
         console.log("@task ip:"+ ip );
 
 		var hrstart = process.hrtime();
-		var context = API.harvest(req, res, dataroot);
+		var context = API.harvest(req, res, user, script);
 
 		try {
 			task( context );
@@ -237,6 +322,34 @@ module.exports.run = Runner;
 /// API
 
 const API = {
+	
+	plugins : {
+		core:{},
+		default:{},
+		premium:{}
+	},
+
+	init: () => {
+		//API.plugins.core.args 		= require('./plugins/core/args');
+		API.plugins.core.auth 		= require('./plugins/core/auth.js');
+		API.plugins.core.send 		= require('./plugins/core/send.js');
+		
+		API.plugins.default.hello 	= require('./plugins/hello.js');
+		console.log("enabled plugins:");
+		console.dir( API.plugins, {colors:true} );
+	},
+
+	test: () => {
+
+		let api = API.harvest(null, null, 'js', 'args');
+		//console.dir(api);
+		//console.log("@api.load call api.hello():", api.hello('jorgen') );
+		api.hello("her1");
+		api.send({alooo:"true"});
+	
+
+
+	},
 
 	create: (args) => {
 		//TODO: mimic this on the server, and add express.res + express.req
@@ -248,10 +361,12 @@ const API = {
 			send: function sendJSON(jsonObject){
 				console.log("@api.send:", JSON.stringify(jsonObject, null, "    ") );
 			},
+
 			save: function(){
 				console.log("@api.save()");
 			},
-			auth: function(opts, cb){
+			/*
+			xxauth: function(opts, cb){
 				console.log("@auth args:", args.Auth);
 				
 				if( opts.keys ){
@@ -290,69 +405,71 @@ const API = {
 				}
 
 			}
+			*/
 		}
 	},
 
-	harvest: (req, res, dataroot) => {
+	harvest: (req, res, user, script) => {
+		let dataroot = user+'/'+script;
+		//mock'ed req and res
+		req = req || {};
+		res = res || {
+			set: (h,m) => {
+				console.log("@base.res.set mock", h, m);
+			},
+			json: (o) => {
+				console.log("@base.res.json mock", o);
+			}
+		};
+		//console.log(req, res);
 
-		var args = {}; // get from req, router, forms etc.
+		var plugs = Object.assign(API.plugins.core, API.plugins.default);
+		if( Users.is_premium(user) ){
+			plugs = Object.assign(plugs, API.plugins.premium);
+		}
 
-		//console.log("@harvest req.params:");
-		//console.dir( req.params, {colors:true} );
-		// < http://localhost:3033/js/counter/abe/lort
-		// > { '0': 'abe/lort' }
-		args.params = req.params['0'] || {};
-
-		//console.log("@harvest req.query:");
-		//console.dir( req.query, {colors:true} );
-		args.query = req.query;
-
-		//console.log("@harvest req.fields:");
-		//console.dir( req.fields, {colors:true} );
-		args.fields = req.fields || {};
-
-		//console.log("@harvest req.files:");
-		//console.dir( req.files, {colors:true} );
-		args.files = req.files || {};
-
-		console.log("@harvest req.headers:");
-		console.dir( req.headers, {colors:true} );
-		//args.headers = req.headers || {};
-		args.origin = req.headers.referer || '';
-		//args.origin = 'https://cloudfn.github.io/website/'; // test
-
-		console.log( "args:");
-		console.dir( args, {colors:true} );
-
-		var base = API.create(args);
-
-		base.store = Store.read(dataroot);
+		var args = require('./plugins/core/args')(req);
+		var base = Object.assign(
+			{
+				clean:Sandbox.clean,
+				args:args,
+				req, 
+				res,
+				method:req.method,
+				/*
+				store: Store.read(dataroot), // the store.json file
+				save: function (data) {
+					console.log("@api.save()", dataroot, base.store);
+					Store.save(dataroot, base.store); //will this work??
+				},
+				*/
+				store: {
+					data: Store.read(dataroot), // the store.json file
+					save: function (data) {
+						console.log("@api.store.save()", dataroot, base.store.data);
+						Store.save(dataroot, base.store.data); //will this work??
+					},
+				}
+			},
+			plugs
+			//API.plugins.core,
+			//API.plugins.default
+		);
+		
+		/*
 		base.save = (data) => {
 			console.log("@api.save()", dataroot, base.store);
 			Store.save(dataroot, base.store);
 		}
 
-		//base.res = res;
-		//base.req = req;
+		base.hello = require('./plugins/hello.js');
+		base.send = require('./plugins/send.js');
+		*/
 
-		base.send = (jsonObject) => {
-
-			// obey return format from url-query
-			console.log("format?", args.query);
-			if( args.query.format ){
-				switch (args.query.format) {
-					case 'jsonp' : 
-						res.set('Content-Type', 'text/javascript');
-						res.send( 'var jsonp='+ JSON.stringify(jsonObject, null, '  ') );
-						break;
-				}
-			}else{
-				res.json(jsonObject);
-				//base.res.json(jsonObject);
-			}
-		}
+		//console.log("base:"); console.dir(base);
 
 		return base;
+
 	}
 }
 module.exports.api = API;

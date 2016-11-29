@@ -1,6 +1,6 @@
 {
   "name": "cloudfn-cli",
-  "version": "0.0.10",
+  "version": "0.1.0",
   "description": "command-line interface to the cloudfn service",
   "main": "index.js",
   "keywords": [
@@ -25,7 +25,6 @@
     "request": "^2.78.0",
     "tmp": "0.0.30"
   },
-  "devDependencies": {},
   "preferGlobal": true,
   "readme": "README.md",
   "repository": {

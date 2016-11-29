@@ -7,7 +7,7 @@
 		
 		/// your code here
 
-		api.send({message:"This is only printed if authenticated"});
+		api.send({ok:true, msg:"Access allowed!"});
 	});
 }
 

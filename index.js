@@ -19,8 +19,10 @@ if( !cloudfn ) cloudfn = require('./lib.cloudfn.js');
 
 console.log("Using lib.cloundfn v."+ cloudfn.version() );
 
+cloudfn.users.cli.load();
+
 var remote  	= 'http://localhost:3033';
-var remote  	= 'https://cloudfn.stream';
+//var remote  	= 'https://cloudfn.stream';
 
 // Features
 
@@ -55,6 +57,7 @@ var remote  	= 'https://cloudfn.stream';
 prompt.message = "";//cloudfn";
 prompt.colors = false;
 
+/*
 /// Setup Credentials locations
 var credentialFileName = '.cloudfn';
 var credentialFileLocations = [
@@ -63,7 +66,7 @@ var credentialFileLocations = [
 	//path.join( process.cwd(), credentialFileName)
 ];
 /// Note: For now, lets use ONE config file. Maybe in the future we can allow multiple (like git)
-
+*/
 
 commander
   .version(pkg.name +" v."+ pkg.version +", using lib.cloudfn "+ cloudfn.version() )
@@ -146,7 +149,7 @@ function _add( scriptfile ){
 
 	prepareSecureRequest( (userconfig, hash) => {
 
-		var url = [remote, 'a', userconfig.username, hash].join('/');
+		var url = [remote, '@', 'a', userconfig.username, hash].join('/');
 		console.log('@add url', url);
 
 		var formData = {file:fs.createReadStream( file ), name:info.name};
@@ -191,7 +194,7 @@ function parse_net_response(err, httpResponse, body, cb){
 /// Get a list of apps / scripts in the current user account
 function _ls(){
 	prepareSecureRequest( (userconfig, hash) => {
-		var url = [remote, 'ls', userconfig.username, hash].join('/');
+		var url = [remote, '@', 'ls', userconfig.username, hash].join('/');
 		console.log('@ls url', url); 
 		request.get(url, (err, httpResponse, body) => {
 			parse_net_response(err, httpResponse, body, (body) => {
@@ -206,7 +209,7 @@ function _ls(){
 /// Remove function
 function _rm( functionName ){
 	prepareSecureRequest( (userconfig, hash) => {
-		var url = [remote, 'rm', userconfig.username, hash].join('/');
+		var url = [remote, '@', 'rm', userconfig.username, hash].join('/');
 		var formData = {name:functionName};
 		console.log('@rm url', url); 
 		request.post({url:url, formData: formData}, (err, httpResponse, body) => {
@@ -228,7 +231,8 @@ function _rm( functionName ){
 /// and the Free version always uses 's' as the $appname
 /// (The server takes care of setting it to 's' on upload)
 function _user(){
-	userconfig = getCredentials();
+	//userconfig = getCredentials();
+	var userconfig = cloudfn.users.cli.get();
 
 	var schema = {
 		properties: {
@@ -238,6 +242,7 @@ function _user(){
 				warning: 'Username must be only letters',
 				default: userconfig.username,
 				required: true,
+				minLength: 2,
 				type: 'string'
 			},
 			email: {
@@ -277,10 +282,10 @@ function _user(){
 		//console.log("getNearestCredentialsFile():", getNearestCredentialsFile() );
 
 		// Credentials to store locally: username, email
-		var local = JSON.stringify({
+		var local = {
 			username: result.username,
 			email: result.email
-		}, null, '    ');
+		};
 
 		/// Credentials to store on the server: username, email, hash of [username, email, password]
 		var userdata = {
@@ -293,7 +298,7 @@ function _user(){
 			})
 		};
 
-		var url = [remote, 'u', result.username, userdata.hash].join('/');
+		var url = [remote, '@', 'u', result.username, userdata.hash].join('/');
 		console.log('@user url', url); 
 		request.get({url:url, formData: userdata}, (err, httpResponse, body) => {
 			parse_net_response(err, httpResponse, body, (body) => {
@@ -302,14 +307,16 @@ function _user(){
 
 				if( body.msg === 'allow' ){
 					console.log("Credentials verified. Now using account '"+ chalk.green(result.username) +"'");
-					fs.writeFileSync( getNearestCredentialsFile(), local);
+					//fs.writeFileSync( getNearestCredentialsFile(), local);
+					cloudfn.users.cli.set( local );
 
 				}else if( body.msg === 'deny' ){
 					console.log("Login failed. (TODO: reset password... contact js@base.io for now... thanks/sorry.");
 				
 				}else if( body.msg === 'new' ){
 					console.log("Created account for user:", chalk.green(result.username) );
-					fs.writeFileSync( getNearestCredentialsFile(), local);
+					//fs.writeFileSync( getNearestCredentialsFile(), local);
+					cloudfn.users.cli.set( local );
 				}
 			});
 		});
@@ -326,7 +333,8 @@ function _set(env){
 /// Utils --------------------------------------------------------------
 
 function prepareSecureRequest(cb){
-	var userconfig = getCredentials();
+	//var userconfig = getCredentials();
+	var userconfig = cloudfn.users.cli.get();
 
 	promptPassword(userconfig, (result) => {
 
@@ -367,6 +375,7 @@ function promptPassword(conf, cb){
 	});
 }
 
+/*
 function getCredentials(){
 	var obs = [];
 	var cfg = {username:'', email:''};
@@ -392,6 +401,7 @@ function getNearestCredentialsFile(){
 	});
 	return f;
 }
+*/
 
 function util_args2json(){
 	var array = commander.rawArgs.slice(4);
