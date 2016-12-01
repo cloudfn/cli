@@ -1,7 +1,7 @@
 // js@base.io
 
-const VERSION 		= '0.0.1-r8';
-const TASKDIRECTORY = 'tasks';
+const VERSION 		= '0.0.1-r9';
+const TASKDIRECTORY = __dirname + '/tasks';
 
 const fs 			= require('fs');
 const os 			= require('os');
@@ -80,8 +80,8 @@ const Users = {
 				}
 			//});
 			Users.cli.local = cfg;
-			console.log("@users.cli.load: Users.cli.local:", Users.cli.local);
-			console.dir(Users.cli.local, {colors:true});
+			//console.log("@users.cli.load: Users.cli.local:", Users.cli.local);
+			//console.dir(Users.cli.local, {colors:true});
 		},
 		save: () => {
 			/// Note: For now, lets use ONE config file. Maybe in the future we can allow multiple (like git)
@@ -137,6 +137,11 @@ const Utils = {
 	},
 
 	mkdirp: (filepath) => {
+		console.log("mkdirp", filepath, fs.existsSync(filepath) );
+		if( fs.existsSync(filepath) ) return;
+		
+		//return;
+
 		const targetDir = filepath;
 		targetDir.split('/').forEach((dir, index, splits) => {
 			const parent = splits.slice(0, index).join('/');
@@ -145,6 +150,13 @@ const Utils = {
 				fs.mkdirSync(dirPath);
 			}
 		})
+	},
+
+	getSafePath: function(filepath){
+		// Note: bound to {userpath} from API.harvest
+		let parts = path.parse(filepath);
+		let dir   = parts.dir.replace(/\./g, '');
+		return path.join(this.userpath, dir, parts.base);
 	}
 
 }
@@ -189,19 +201,19 @@ module.exports.verify = Verify;
 
 const Store = {
 	init: (filepath) => {
-		var filename = path.join( __dirname, TASKDIRECTORY, filepath, 'store.json');
+		var filename = path.join( TASKDIRECTORY, filepath, 'store.json');
 		if( !Utils.is_readable(filename, true) ){
 			fs.writeFileSync( filename, '{}' );
 		}
 	},
 
 	save: (filepath, data) => {
-		var filename = path.join( __dirname, TASKDIRECTORY, filepath, 'store.json');
+		var filename = path.join( TASKDIRECTORY, filepath, 'store.json');
 		fs.writeFileSync( filename, JSON.stringify(data, null, '  ') );
 	},
 
 	read: (filepath) => {
-		var filename = path.join( __dirname, TASKDIRECTORY, filepath, 'store.json');
+		var filename = path.join( TASKDIRECTORY, filepath, 'store.json');
 		return JSON.parse( fs.readFileSync(filename).toString() ) || {};
 	}
 }
@@ -222,7 +234,7 @@ var Tasks = {
 
 		if( !jscode ) return cb(false);
 
-		var filepath  = path.join(__dirname, TASKDIRECTORY, user, script);
+		var filepath  = path.join(TASKDIRECTORY, user, script);
 		console.log({user, script, filepath});
 
 		Utils.mkdirp( filepath );
@@ -335,6 +347,11 @@ const API = {
 		API.plugins.core.send 		= require('./plugins/core/send.js');
 		
 		API.plugins.default.hello 	= require('./plugins/hello.js');
+
+		API.plugins.premium.fs 		= require('./plugins/premium/fs.js');
+
+		//TODO: Add loader, and use a mocking lib to prevent 'cannot read property fs on undefined' errors
+
 		console.log("enabled plugins:");
 		console.dir( API.plugins, {colors:true} );
 	},
@@ -348,6 +365,12 @@ const API = {
 		api.send({alooo:"true"});
 	
 
+		api.fs.test();
+		api.fs.test.call(this);
+
+		api.fs.read('/etc/hosts', (err, data) => {
+			console.log("@lib api.test > api.fs.read", err, data);
+		});
 
 	},
 
@@ -411,6 +434,10 @@ const API = {
 
 	harvest: (req, res, user, script) => {
 		let dataroot = user+'/'+script;
+		let userpath = path.join(TASKDIRECTORY, dataroot);
+
+
+
 		//mock'ed req and res
 		req = req || {};
 		res = res || {
@@ -424,9 +451,17 @@ const API = {
 		//console.log(req, res);
 
 		var plugs = Object.assign(API.plugins.core, API.plugins.default);
+
+		/*
 		if( Users.is_premium(user) ){
 			plugs = Object.assign(plugs, API.plugins.premium);
 		}
+
+		console.dir(API.plugins.premium.fs)
+		var boundfs = {
+			test: API.plugins.premium.fs.test.bind(this)
+		}
+		*/
 
 		var args = require('./plugins/core/args')(req);
 		var base = Object.assign(
@@ -436,26 +471,34 @@ const API = {
 				req, 
 				res,
 				method:req.method,
-				/*
-				store: Store.read(dataroot), // the store.json file
-				save: function (data) {
-					console.log("@api.save()", dataroot, base.store);
-					Store.save(dataroot, base.store); //will this work??
-				},
-				*/
 				store: {
 					data: Store.read(dataroot), // the store.json file
 					save: function (data) {
 						console.log("@api.store.save()", dataroot, base.store.data);
 						Store.save(dataroot, base.store.data); //will this work??
 					},
-				}
+				},
+				root: TASKDIRECTORY,
+				userpath: userpath,
+				safePath: Utils.getSafePath.bind({userpath}),
 			},
 			plugs
 			//API.plugins.core,
 			//API.plugins.default
 		);
-		
+
+
+
+
+		//plugs = Object.assign(plugs, API.plugins.premium);
+		console.log("API.plugins.premium keys:", Object.keys(API.plugins.premium) );
+		if( Users.is_premium(user) ){
+			base.fs = {};
+			Object.keys(API.plugins.premium.fs).map( (key) => {
+				base.fs[key] = API.plugins.premium.fs[key].bind(base);
+			});
+		}
+			
 		/*
 		base.save = (data) => {
 			console.log("@api.save()", dataroot, base.store);
