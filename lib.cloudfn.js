@@ -6,6 +6,7 @@ const TASKDIRECTORY = __dirname + '/tasks';
 const fs 			= require('fs');
 const os 			= require('os');
 const path 			= require('path');
+const util 			= require('util');
 
 module.exports.version = () => VERSION;
 
@@ -251,14 +252,17 @@ var Tasks = {
 
 		Store.init( user+'/'+script );
 
+
 		Tasks.list[user] = Tasks.list[user] || {};
 	    Tasks.list[user][script] = {
 	    	enabled: true,
 	    	created_at: new Date().toISOString(), //moment().toISOString()
 	    	code: jscode,
+	    	logfile: path.join(TASKDIRECTORY, user, script, 'log.txt'),
 	    	fn: (req, res) => {
 		        console.log( 'Calling', req.method, req.url );
-		        Runner.task( Tasks.list[user][script].code, req, res, user, script);
+		        //Runner.task( Tasks.list[user][script].code, req, res, user, script);
+		        Runner.task( Tasks.list[user][script], req, res, user, script);
 		    }
 		};
 	    return true;
@@ -317,15 +321,24 @@ const Runner = {
 		var context = API.harvest(req, res, user, script);
 
 		try {
-			task( context );
+			
+			task.logstream = fs.createWriteStream( task.logfile, {flags: 'a'} );
+			task.code( context );
+
 		}catch(e){
 			console.log( "Script error:", e.toString() );
 		}
 
-		Sandbox.restore();
-
 		var hrend = process.hrtime(hrstart);
-		console.log( "Script execution completed in %ds %dms (%s)", hrend[0], hrend[1]/1000000, req.url);
+		var msg   = util.format("Script execution completed in %ds %dms (%s)", hrend[0], hrend[1]/1000000, req.url);
+		
+		Sandbox.restore(msg);
+
+		process.nextTick(function() {
+	   		task.logstream.end( '@'+ msg +'\n' );
+	    });
+
+		console.log( msg );
 	}
 }
 module.exports.run = Runner;
@@ -436,8 +449,6 @@ const API = {
 		let dataroot = user+'/'+script;
 		let userpath = path.join(TASKDIRECTORY, dataroot);
 
-
-
 		//mock'ed req and res
 		req = req || {};
 		res = res || {
@@ -463,6 +474,9 @@ const API = {
 		}
 		*/
 
+		var logstream = fs.createWriteStream( Tasks.list[user][script].logfile, { flags: 'a' });
+		logstream.write('\n');
+
 		var args = require('./plugins/core/args')(req);
 		var base = Object.assign(
 			{
@@ -480,6 +494,9 @@ const API = {
 				},
 				root: TASKDIRECTORY,
 				userpath: userpath,
+				dataroot: dataroot,
+				//log: logFile,
+				logstream: logstream,
 				safePath: Utils.getSafePath.bind({userpath}),
 			},
 			plugs
@@ -517,6 +534,20 @@ const API = {
 }
 module.exports.api = API;
 
+/*
+var nativeConsole = console;
+console.log("nativeConsole", nativeConsole);
+
+var cconsole = {
+	log: function(){
+
+		nativeConsole.warn("MOCK", arguments);
+	}
+}
+global.console = cconsole;
+console.log("@test 1");
+cconsole.log("@test 2");
+*/
 
 /// Sandbox
 
@@ -525,8 +556,15 @@ var Module = require("module");
 const Sandbox = {
 	module_original_loadFn: Module._load,
 
-	clean: function(){
+	console: console,
+	console_trap: false,
+
+	clean: function(apiref){
 		console.log("@sandbox clean()");
+
+		Sandbox.console_trap = false;
+
+		//console.dir( apiref );
 	    
 	    var keep_process = ['nextTick', '_tickCallback', 'stdout', 'console', 'hrtime', 'emitWarning', 'env'];
 	    var env_bak = this.process.env;
@@ -544,20 +582,43 @@ const Sandbox = {
 	    //console.dir(this, {colors:true});
 	    //console.dir(arguments, {colors:true});
 
-	    //TODO:
+	    // Disable require()
+	    Module._load = Sandbox.load_disabled;
+
+
 	    // replace process.console with logger, so that the user can 
 	    // write console.log(a,b,c) and have that logged to a file
 	    // in the current script directory
-	    // ...and provide a method to view / tail them
+	    // TODO: provide a method to view / tail them
+		['log', 'info', 'warn', 'error', 'dir'].map( (key) => {
+			console[key] = function(){
+				let log = apiref.logstream;
+				let fnkey = key;
+				if( Sandbox.console_trap ){
+					log.write( "type:"+ fnkey +"\t"+ util.format.apply(null, arguments) + '\n');
+	  				process.stdout.write("type:"+ fnkey +"\t"+ util.format.apply(null, arguments) + '\n');
+				}else{
+					//Sandbox.console.warn.apply(null, arguments);
+					process.stdout.write( util.format.apply(null, arguments) + '\n');
+				}
+			}
+		});
 
-	    Module._load = Sandbox.load_disabled;
-
+		console.log("== usr begin", apiref.method, apiref.dataroot);
+		
+		Sandbox.console_trap = true;
+	   
 	    return [];
 	},
 
-	restore: () => {
-	    console.log("@sandbox restore()");
+	restore: (msg) => {
+	    Sandbox.console_trap = false;
+	    console.log("== usr end");
+	    console.log(msg);
+
+	    //console.log("@sandbox restore()");
 	    Module._load = Sandbox.module_original_loadFn;
+	    console.log("@sandbox released");
 	},
 
 	load_disabled: (request, parent) => {
@@ -573,7 +634,7 @@ const Sandbox = {
 	create: (code) => {
 		return [
 	        'return (api) => {',
-	        '    arguments = api.clean.call(this);',
+	        '    arguments = api.clean.call(this, api);',
 	        '    // sandbox end',
 	        ''
 	    ].join("\n") +'    //'+ code.trim();
