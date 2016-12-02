@@ -14,20 +14,22 @@ var hashObject  = require('hash-object');
 
 var pkg     	= require('./package.json');
 
+var remote  	= 'http://localhost:3033';
+//var remote  	= 'https://cloudfn.stream';
+
 var cloudfn 	= null;
 try {
 	cloudfn = require('../cloudfn-system/lib.cloudfn.js');
 }catch(e){
 	cloudfn = require('./lib.cloudfn.js');
+	remote  = 'https://cloudfn.stream';
 }
 //if( !cloudfn ) cloudfn = require('./lib.cloudfn.js');
 
-console.log("Using lib.cloundfn v."+ cloudfn.version() );
+console.log("Using lib.cloundfn v."+ cloudfn.version() +", remote:", remote);
 
 cloudfn.users.cli.load();
 
-var remote  	= 'http://localhost:3033';
-//var remote  	= 'https://cloudfn.stream';
 
 // Features
 
