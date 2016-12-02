@@ -14,8 +14,13 @@ var hashObject  = require('hash-object');
 
 var pkg     	= require('./package.json');
 
-var cloudfn 	= require('../cloudfn-system/lib.cloudfn.js');
-if( !cloudfn ) cloudfn = require('./lib.cloudfn.js');
+var cloudfn 	= null;
+try {
+	cloudfn = require('../cloudfn-system/lib.cloudfn.js');
+}catch(e){
+	cloudfn = require('./lib.cloudfn.js');
+}
+//if( !cloudfn ) cloudfn = require('./lib.cloudfn.js');
 
 console.log("Using lib.cloundfn v."+ cloudfn.version() );
 
