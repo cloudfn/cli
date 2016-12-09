@@ -1,7 +1,8 @@
 // js@base.io
 
-const VERSION 		= '0.0.1-r10';
-const TASKDIRECTORY = __dirname + '/tasks';
+const VERSION 			= '0.0.1-r10';
+const TASKDIRECTORY 	= __dirname + '/tasks';
+const PLUGINSDIRECTORY 	= __dirname + '/lib.cloudfn.plugins';
 
 // only depend on node core modules
 const fs 			= require('fs');
@@ -355,7 +356,8 @@ module.exports.run = Runner;
 
 
 
-/// Context
+/// Mock Context
+/// Used for running cli test script locally
 
 var MockContext = function(args){
 	// used for testing scripts locally
@@ -363,8 +365,8 @@ var MockContext = function(args){
 	var user = 'system'; // no, we need to get this from the cli
 	var script = 'mock';
 
-//	var _userpath = path.join(TASKDIRECTORY, user, script);
-//	var _premium  = Users.is_premium(user);
+	//	var _userpath = path.join(TASKDIRECTORY, user, script);
+	//	var _premium  = Users.is_premium(user);
 
 	this.user 	= user;
 	this.script = script;
@@ -394,6 +396,10 @@ var MockContext = function(args){
 
 	return this;
 }
+
+
+/// Context
+/// Provides the api for all scripts
 
 var Context = function(req, res, user, script){
 
@@ -457,10 +463,12 @@ const Plugins = {
 	load: () => {
 		//TODO: Add loader, and use a mocking lib to prevent 'cannot read property fs on undefined' errors
 		
-		Plugins.core.args 		= require('./plugins/core/args.js');
-		Plugins.core.auth 		= require('./plugins/core/auth.js');
-		Plugins.core.send 		= require('./plugins/core/send.js');		
-		Plugins.premium.fs 		= require('./plugins/premium/fs.js');
+		//PLUGINSDIRECTORY 	= __dirname + '/lib.cloudfn.plugins';
+
+		Plugins.core.args 		= require( PLUGINSDIRECTORY +'/core/args.js');
+		Plugins.core.auth 		= require( PLUGINSDIRECTORY +'/core/auth.js');
+		Plugins.core.send 		= require( PLUGINSDIRECTORY +'/core/send.js');		
+		Plugins.premium.fs 		= require( PLUGINSDIRECTORY +'/premium/fs.js');
 
 		//Plugins.list();
 	},
