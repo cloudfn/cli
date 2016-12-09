@@ -14,20 +14,30 @@ var hashObject  = require('hash-object');
 
 var pkg     	= require('./package.json');
 
+var debug 		= true;
 var remote  	= 'http://localhost:3033';
-//var remote  	= 'https://cloudfn.stream';
+//var remote  	= 'http://cloudfn.stream';
 
 var cloudfn 	= null;
 try {
-	cloudfn = require('../cloudfn-system/lib.cloudfn.js');
+	// we're running from the repo, e.g. dev mode, via
+	// $ node index.js user
+	cloudfn 	= require('../cloudfn-system/lib.cloudfn.js');
+	debug 		= true;
+	remote  	= 'http://localhost:3033';
+	
 }catch(e){
-	cloudfn = require('./lib.cloudfn.js');
-	remote  = 'https://cloudfn.stream';
+	// we're running in deployed mode, via
+	// $ cfn user
+	cloudfn 	= require('./lib.cloudfn.js');
+	remote  	= 'https://cloudfn.stream';
+	debug 		= false;
 }
 //if( !cloudfn ) cloudfn = require('./lib.cloudfn.js');
 
-console.log("Using lib.cloundfn v."+ cloudfn.version() +", remote:", remote);
+console.log("Using lib.cloundfn v."+ cloudfn.version() +" Debug: "+ debug +", remote:", remote);
 
+cloudfn.plugins.load();
 cloudfn.users.cli.load();
 
 
@@ -202,12 +212,12 @@ function parse_net_response(err, httpResponse, body, cb){
 function _ls(){
 	prepareSecureRequest( (userconfig, hash) => {
 		var url = [remote, '@', 'ls', userconfig.username, hash].join('/');
-		console.log('@ls url', url); 
+		if( debug ) console.log('@ls url', url); 
 		request.get(url, (err, httpResponse, body) => {
 			parse_net_response(err, httpResponse, body, (body) => {
 				//TODO: format output
 				console.log("Registered functions:");
-				console.dir(body.data);
+				console.dir(body.data, {colors:true});
 			});
 		});
 	});
@@ -218,12 +228,12 @@ function _rm( functionName ){
 	prepareSecureRequest( (userconfig, hash) => {
 		var url = [remote, '@', 'rm', userconfig.username, hash].join('/');
 		var formData = {name:functionName};
-		console.log('@rm url', url); 
+		if( debug ) console.log('@rm url', url); 
 		request.post({url:url, formData: formData}, (err, httpResponse, body) => {
 			parse_net_response(err, httpResponse, body, (body) => {
 				//TODO: format output
 				console.log("Registered functions:");
-				console.dir(body.data);
+				console.dir(body.data, {colors:true});
 			});
 		});
 	});
@@ -281,10 +291,10 @@ function _user(){
 			console.log("");
 			return 1;
 		}
-		console.log('Command-line input received:');
-		console.log('  Username: ' + result.username);
-		console.log('  Email: ' + result.email);
-		console.log('  Password: ' + result.password);
+		if( debug ) console.log('Command-line input received:');
+		if( debug ) console.log('  Username: ' + result.username);
+		if( debug ) console.log('  Email: ' + result.email);
+		if( debug ) console.log('  Password: ' + result.password);
 
 		//console.log("getNearestCredentialsFile():", getNearestCredentialsFile() );
 
@@ -306,11 +316,11 @@ function _user(){
 		};
 
 		var url = [remote, '@', 'u', result.username, userdata.hash].join('/');
-		console.log('@user url', url); 
+		if( debug ) console.log('@user url', url); 
 		request.get({url:url, formData: userdata}, (err, httpResponse, body) => {
 			parse_net_response(err, httpResponse, body, (body) => {
 				
-				console.log(body.msg);
+				if( debug ) console.log("@user: http-response:", body.msg);
 
 				if( body.msg === 'allow' ){
 					console.log("Credentials verified. Now using account '"+ chalk.green(result.username) +"'");
@@ -382,47 +392,45 @@ function promptPassword(conf, cb){
 	});
 }
 
-/*
-function getCredentials(){
-	var obs = [];
-	var cfg = {username:'', email:''};
-	credentialFileLocations.map( (file) => {
-		if( cloudfn.utils.is_readable(file) ){
-			var o = JSON.parse( fs.readFileSync(file).toString() );
-			obs.push( o );
-			cfg = Object.assign(cfg, o);
-		}
-	});
-	//console.dir(obs, {colors:true});
-	//console.dir(cfg, {colors:true});
-
-	return cfg;
-}
-
-function getNearestCredentialsFile(){
-	var f = credentialFileLocations[0];
-	credentialFileLocations.map( (file) => {
-		if( cloudfn.utils.is_readable(file) ){
-			f=file;
-		}
-	});
-	return f;
-}
-*/
 
 function util_args2json(){
-	var array = commander.rawArgs.slice(4);
+	var res = {};
+	var arr = commander.rawArgs.slice(4);
 	// if only one arg (test examples/auth-token.js {Auth:bb}) is provided on the cli, it looks like: ['{Auth:bb}']
 	// but if multiple args are present (test examples/auth-token.js {Auth:bb,foo:bar}), it looks like ['Auth:bb', 'foo:bar']
-	if( array.length === 1 ) array = [array[0].replace(/{|}/g, "")];
+	if( arr.length === 1 ) arr = [arr[0].replace(/{|}/g, "")];
+
+	//console.log("arr", arr); // [ 'key=AABBCC', 't=22' ]
 	
 	var args = {};
-	array.map( (pair) => {
-		var split = pair.split(':');
+	arr.map( (pair) => {
+		var split = pair.split('=');
 		args[ split[0] ] = isNaN(split[1]) ? split[1] : Number(split[1]);
 	});
+	console.log(">args", args);
 
-	return args;
+	
+
+	// lift $origin
+	console.log(">Object.keys(args)", Object.keys(args) );
+	if( Object.keys(args).indexOf('origin') > -1 ){
+		res.origin = args.origin;
+		delete args.origin;
+	}
+
+	res.query = args;
+	/*
+	// provided $args is (weirdly) formatted as { 'key=AABBCC': undefined }. We need it like { query: { key: 'AABBCC' } }:
+	// transform cli args into query-pairs
+	let argObject = {query:{}};
+	Object.keys(args).map( (kv) => {
+		let pair = kv.split('=');
+		argObject.query[ pair[0] ] = pair[1];
+	});
+	this.args 	= Plugins.core.args( argObject );
+	*/
+	console.log(">res", res);
+	return res;
 }
 
 function util_args2int(){

@@ -3,7 +3,7 @@
 	/// Example of using the api.auth.keys feature
 	/// Provide the valid keys, and wrap your code in its callback.
 
-	api.auth({origins:['https://cloudfn.github.io/website/']}, () => {
+	api.auth({origins:['*://cloudfn.github.io/*']}, () => {
 		
 		/// your code here
 
@@ -12,6 +12,7 @@
 }
 
 // cli usage:
-// $ cfn test examples/auth-token.js {Auth:aa}
+// $ cfn test examples/auth-origin.js origin=https://cloudfn.github.io/websi
+
 // or, to check failure:
-// $ cfn test examples/auth-token.js {Auth:bb}
+// $ cfn test examples/auth-origin.js origin=https://cloudfn.github.com

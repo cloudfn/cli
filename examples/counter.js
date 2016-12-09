@@ -1,8 +1,15 @@
 (api) => {
-    api.store.counter = api.store.counter || 0;
-    api.store.counter++;
-    console.log('api.store.counter', api.store.counter );
-    api.send({counter: api.store.counter});
+ 
+	// init if needed
+    api.store.data['counter'] = api.store.data['counter'] || 1;
 
-    api.save(); // always call api.save() if you have put/modified something in the api.store
+    // increment
+    api.store.data['counter'] = api.store.data['counter'] +1;
+
+   	// echo
+    api.send({counter: api.store.data['counter']});
+
+    // persist
+    api.store.save();
+
 }

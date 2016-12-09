@@ -11,7 +11,9 @@
 	});
 }
 
+
 // cli usage:
-// $ cfn test examples/auth-token.js {Auth:aa}
+// $ cfn test examples/auth-keys.js key=AABBCC
+
 // or, to check failure:
-// $ cfn test examples/auth-token.js {Auth:bb}
+// $ cfn test examples/auth-keys.js key=XXYYZZ
