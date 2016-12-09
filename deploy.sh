@@ -15,4 +15,9 @@ git push origin master --quiet
 npm version patch
 npm publish
 
+echo "Cleaning up"
+
+rm -rf "./lib.cloudfn.plugins"
+rm "lib.cloudfn.js"
+
 echo "Done"

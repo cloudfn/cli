@@ -5,7 +5,8 @@
   "main": "index.js",
   "keywords": [
     "cloudfn",
-    "cli"
+    "cli",
+    "faas"
   ],
   "author": "Jørgen Skogmo <js@base.io> (http://base.io/)",
   "license": "MIT",
