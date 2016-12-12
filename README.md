@@ -1,6 +1,15 @@
 # cloudfn-cli
 
-The cloudfn command-line tool
+Short for "cloud function", cloudfn is a Function-as-a-Service (FaaS) that takes the
+infrastructure burden out of server-side code.
+
+Cloudfn is suitable for projects that needs some* server-based functionality,
+but cant afford (or bother) to setup the team, tech and infrastructure required.
+
+With cloudfn, you simply express your functionality in a javascript function,
+use this command-line tool to upload it,
+and call the resulting URL to get/set your data.
+
 
 ## Installation
 
@@ -45,6 +54,9 @@ The combination of *username*, *email* and *password* will be hashed to form you
 
 The password is not stored, and is never sent to the server.  
 (Which means you need to type it everytime you interact... Let is know in [this issue]() if that is too tedious.)
+
+Read our [privacy]() and [authentication]() docs for additional details.
+
 
 ## Commands
 
