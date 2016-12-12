@@ -35,7 +35,7 @@ try {
 }
 //if( !cloudfn ) cloudfn = require('./lib.cloudfn.js');
 
-console.log("Using lib.cloundfn v."+ cloudfn.version() +" Debug: "+ debug +", remote:", remote);
+console.log("Using lib.cloudfn v."+ cloudfn.version() +" Debug: "+ debug +", remote:", remote);
 
 cloudfn.plugins.load();
 cloudfn.users.cli.load();
