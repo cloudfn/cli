@@ -108,10 +108,11 @@ Issues a HTTP GET request to the <scripturl>.
 e.g: `$ cfn call js/counter `
 
 You can provide key=value pairs as `args` if you want.   
-e.g. `$ cfn call examples/echo name=jorgen`  
+e.g. `$ cfn call examples/echo msg=hello`  
 These will be available in `api.args.params` in your scripts.
+Check []()
 
-Feel free to use [httpie](), [postman]() or [curl]() instead.
+Feel free to use [httpie](), [postman]() or [curl]() for commandline testing instead.
 
 
 #### Token
