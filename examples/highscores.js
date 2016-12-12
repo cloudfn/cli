@@ -1,49 +1,37 @@
 (api) => {
-    
-    api.send({highscores:{ole:1,js:2}});
+ 
+    // init if needed
+    api.store.data['scores'] = api.store.data['scores'] || {};
 
-    /*
-    let username = req.query.username   || "";
-    let score    = req.query.score      || 0;
+    // capture (treat query and params equally)
+    let username  = api.args.query.username  || api.args.params.username || false;
+    let score = api.args.query.score || api.args.params.score || false;
 
-    context.store.highscores = context.store.highscores || {};
-    
-    if( context.store.highscores[username] ){
-        context.store.highscores[username].score = score;
-        context.store.highscores[username].updatedAt = Date.now();
-    }else{
-        context.store.highscores[username] = {
-            score: 0,
-            createdAt: Date.now()
+    // debug
+    //api.send({"username": username, "score": score, "method": api.method}); return;
+
+    // early out (cant proceed without a username)
+    if( username === false ){
+        api.send({ok:false, msg:"param: 'username' required"});
+        return;
+    }
+
+    if( api.method === 'POST' ){
+
+        // make sure score is provided
+        if( score === false ){
+            api.send({ok:false, msg:"param: 'score' required"});
+            return;
         }
+
+        // insert or update
+        api.store.data['scores'][ username ] = score;
+
+        // persist
+        api.store.save();
     }
 
-    console.log('chighscores:', context.store.highscores );
-    res.json({result: context.store.highscores[username]});
-    next();
-    */
+    // respond
+    let record = api.store.data['scores'][ username ];
+    api.send({ok:true, msg:'RECORD', record:record});
 }
-
-/*
-return (context, req, res, next) => {
-    
-    let username = req.query.username   || "";
-    let score 	 = req.query.score 		|| 0;
-
-    context.store.highscores = context.store.highscores || {};
-    
-    if( context.store.highscores[username] ){
-    	context.store.highscores[username].score = score;
-    	context.store.highscores[username].updatedAt = Date.now();
-    }else{
-    	context.store.highscores[username] = {
-    		score: 0,
-    		createdAt: Date.now()
-    	}
-    }
-
-	console.log('chighscores:', context.store.highscores );
-    res.json({result: context.store.highscores[username]});
-    next();
-}
-*/
