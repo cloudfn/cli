@@ -1,12 +1,12 @@
 (api) => {
  
-	// init if needed
-    api.store.data['counter'] = api.store.data['counter'] || 1;
+    // init if needed
+    api.store.data['counter'] = api.store.data['counter'] || 0;
 
     // increment
     api.store.data['counter'] = api.store.data['counter'] +1;
 
-   	// echo
+    // echo
     api.send({counter: api.store.data['counter']});
 
     // persist
