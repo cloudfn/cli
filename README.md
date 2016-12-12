@@ -53,7 +53,7 @@ Something secret.
 The combination of *username*, *email* and *password* will be hashed to form your *identity*, and secure all communication with the service.  
 
 The password is not stored, and is never sent to the server.  
-(Which means you need to type it everytime you interact... Let is know in [this issue]() if that is too tedious.)
+(Which means you need to type it everytime you interact... Let is know in [this issue](https://github.com/cloudfn/cli/issues/1) if that is too tedious.)
 
 Read our [privacy]() and [authentication]() docs for additional details.
 
@@ -66,7 +66,11 @@ Read our [privacy]() and [authentication]() docs for additional details.
 
 e.g: `$ cfn add examples/hello.js`
 
- Adds a script to the service, and return a URL you can "call" with HTTP(S) GET and POST requests.
+Adds a script to the service, and return a URL you can "call" with HTTP(S) GET and POST requests.
+
+Something like this:
+
+`https://cloudfn.stream/<username>/hello-world`
 
 
 #### Test
