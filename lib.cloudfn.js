@@ -466,7 +466,10 @@ var Context = function(req, res, user, script){
 		console.log("Loading Plugin", key);
 		this[key] = Plugins.default[key].bind(this);
 	});
-
+	
+	/*var r =  require("request");
+	this.jar	= r.jar;
+	this.cookie = r.cookie;*/
 
 	// Load or Mock Premium features
 
@@ -510,6 +513,8 @@ const Plugins = {
 
 	load_extended: () => {
 		Plugins.default.request	= require( PLUGINSDIRECTORY +'/default/request.js');
+
+
 	},
 
 	list: () => {
