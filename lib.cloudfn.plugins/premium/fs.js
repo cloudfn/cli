@@ -35,11 +35,11 @@ const FSModule = {
 	},
 
 	write: function(file, data, cb){
-		console.log("@prem.fs write:", file, data);
-		console.log("@prem.fs write:", this);
+		console.log("@prem.fs write:", "file:", file, "data:", data);
 		let safeFile = this.getSafePath(file);
+		console.log("@prem.fs write safeFile:", safeFile);
 		let err = false;
-		console.log("@prem.fs write:", file, ' > ', safeFile, data );
+		console.log("@prem.fs write:", file, ' > ', safeFile, "data:", data );
 
 		try{
 			fs.writeFileSync(safeFile, data);

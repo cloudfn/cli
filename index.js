@@ -22,13 +22,13 @@ var cloudfn 	= null;
 try {
 	// we're running from the repo, e.g. dev mode, via
 	// $ node index.js user
+	// how we know? because the require() below works
 	cloudfn 	= require('../cloudfn-system/lib.cloudfn.js');
 	debug 		= true;
 	remote  	= 'http://localhost:3033';
 	
 }catch(e){
-	// we're running in deployed mode, via
-	// $ cfn user
+	// we're running in deployed (npm install'ed) mode
 	cloudfn 	= require('./lib.cloudfn.js');
 	remote  	= 'https://cloudfn.stream';
 	debug 		= false;

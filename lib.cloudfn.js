@@ -1,14 +1,19 @@
 // js@base.io
 
-const VERSION 			= '0.0.1-r10';
+const VERSION 			= '0.0.2';
 const TASKDIRECTORY 	= __dirname + '/tasks';
 const PLUGINSDIRECTORY 	= __dirname + '/lib.cloudfn.plugins';
+const USER_SCRIPT_LIFETIME = 4000;
 
-// only depend on node core modules
+// the lib only depends on node core modules
+// but some plugins may require additional third-party modules
 const fs 			= require('fs');
 const os 			= require('os');
 const path 			= require('path');
 const util 			= require('util');
+
+
+
 
 module.exports.version = () => VERSION;
 
@@ -109,20 +114,22 @@ module.exports.users = Users;
 
 const Utils = {
 
-	is_readable: (file, silent=true) => {
+	is_readable: (file, silent) => {
+		let quiet = silent || true;
 	    try {
 	        fs.accessSync(file, 'r');
 	        return true;
 	    }catch(e){
-	    	if( !silent) console.log("@utils is_readable(): Cant read file "+ file);
+	    	if( !quiet) console.log("@utils is_readable(): Cant read file "+ file);
 	        return false;
 	    }
 	},
 	
-	is_javascript: (file, silent=true) => {
+	is_javascript: (file, silent) => {
+		let quiet = silent || true;
 		var info = path.parse(file);
 		if( info.ext !== '.js' ){
-			if( !silent) console.log("@utils is_javascript(): Only '.js' files accepted. (Got '"+ info.ext +"')");
+			if( !quiet) console.log("@utils is_javascript(): Only '.js' files accepted. (Got '"+ info.ext +"')");
 			return false;
 		}
 		return true;
@@ -160,7 +167,8 @@ const Utils = {
 
 	getSafePath: function(filepath){
 		// Note: bound to {userpath} from Context
-		console.log("@Utils.getSafePath", this);
+		console.log("@Utils.getSafePath > filepath", filepath);
+		console.log("@Utils.getSafePath > userpath", this.userpath);
 
 		let parts = path.parse(filepath);
 		let dir   = parts.dir.replace(/\./g, '');
@@ -268,6 +276,7 @@ var Tasks = {
 	    	code: jscode,
 	    	logfile: path.join(TASKDIRECTORY, user, script, 'log.txt'),
 	    	fn: (req, res) => {
+	    		console.log("\n\n---------------");
 		        console.log( 'Calling', req.method, req.url );
 		        //Runner.task( Tasks.list[user][script].code, req, res, user, script);
 		        Runner.task( Tasks.list[user][script], req, res, user, script);
@@ -327,7 +336,6 @@ const Runner = {
 		var ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
         console.log("@task ip:"+ ip );
 
-		var hrstart = process.hrtime();
 		var context = new Context(req, res, user, script);
 
 		try {
@@ -337,22 +345,13 @@ const Runner = {
 
 		}catch(e){
 			console.log( "Script error:", e.toString() );
+			console.log( e );
+
 		}
-
-		var hrend = process.hrtime(hrstart);
-		var msg   = util.format("Script execution completed in %ds %dms (%s)", hrend[0], hrend[1]/1000000, req.url);
-		
-		Sandbox.restore(msg);
-
-		process.nextTick(function() {
-	   		//task.logstream.end( '@'+ msg +'\n' );
-	   		res.end();
-	    });
-
-		console.log( msg );
 	}
 }
 module.exports.run = Runner;
+
 
 
 
@@ -403,6 +402,7 @@ var MockContext = function(args){
 
 var Context = function(req, res, user, script){
 
+	var _hrstart = process.hrtime();
 	var _res = res;
 	var _userpath = path.join(TASKDIRECTORY, user, script);
 	var _premium  = Users.is_premium(user);
@@ -427,6 +427,47 @@ var Context = function(req, res, user, script){
 		},
 	}
 
+	this.wait = (fn, ms) => {
+		console.log("@api.wait", ms);
+		this.wait_timeout = setTimeout(fn, ms);
+		
+		clearTimeout( this.kill_timeout );
+		this.kill_timeout = setTimeout( this.kill, USER_SCRIPT_LIFETIME + ms);
+	}
+
+	
+	this.next = () => {
+		console.log("@api.next");
+
+		var hrend = process.hrtime( _hrstart);
+		var msg   = util.format("%s %s Completed in %ds %dms", this.method, req.url, hrend[0], hrend[1]/1000000);
+		Sandbox.restore(msg);
+
+		clearTimeout( this.kill_timeout );
+
+		process.nextTick( () => {
+	   		//task.logstream.end( '@'+ msg +'\n' );
+	   		console.log("@api.next nextTick");
+	   		_res.end();
+	    });
+
+	}
+
+	this.kill = () => {
+		console.log("@api.kill");
+		this.next();
+	}
+
+	// Allow scripts to run async, for a while
+	this.kill_timeout = setTimeout( this.kill, USER_SCRIPT_LIFETIME);
+
+	// Load Default plugins	
+	Object.keys(Plugins.default).map( (key) => {
+		console.log("Loading Plugin", key);
+		this[key] = Plugins.default[key].bind(this);
+	});
+
+
 	// Load or Mock Premium features
 
 	this.fs = {};
@@ -434,6 +475,7 @@ var Context = function(req, res, user, script){
 		if( _premium ){
 			this.fs[key] = Plugins.premium.fs[key].bind(this);
 		}else{
+			// mock.
 			this.fs[key] = function(){
 				var _key = key;
 				console.log("Access to Premium API call denied ("+ _key +")" );
@@ -453,7 +495,6 @@ var Context = function(req, res, user, script){
 
 /// Plugins
 
-
 const Plugins = {
 
 	core:{},
@@ -461,16 +502,14 @@ const Plugins = {
 	premium:{},
 	
 	load: () => {
-		//TODO: Add loader, and use a mocking lib to prevent 'cannot read property fs on undefined' errors
-		
-		//PLUGINSDIRECTORY 	= __dirname + '/lib.cloudfn.plugins';
-
 		Plugins.core.args 		= require( PLUGINSDIRECTORY +'/core/args.js');
 		Plugins.core.auth 		= require( PLUGINSDIRECTORY +'/core/auth.js');
 		Plugins.core.send 		= require( PLUGINSDIRECTORY +'/core/send.js');		
 		Plugins.premium.fs 		= require( PLUGINSDIRECTORY +'/premium/fs.js');
+	},
 
-		//Plugins.list();
+	load_extended: () => {
+		Plugins.default.request	= require( PLUGINSDIRECTORY +'/default/request.js');
 	},
 
 	list: () => {
@@ -702,7 +741,7 @@ const Sandbox = {
 	    var keep_process = ['nextTick', '_tickCallback', 'stdout', 'console', 'hrtime', 'emitWarning', 'env'];
 	    var env_bak = this.process.env;
 	    Object.keys(this.process).map( (key) => {
-	        if( keep_process.indexOf(key) < 0 ) delete this.process[key];
+	        //if( keep_process.indexOf(key) < 0 ) delete this.process[key];
 	    });
 	    /// PM2 relies on env.MODULE_DEBUG
 	    this.process.env = {MODULE_DEBUG:env_bak.MODULE_DEBUG};
@@ -710,7 +749,7 @@ const Sandbox = {
 
 	    var keep_this = ['console', 'process', 'Buffer', 'setImmediate'];
 	    Object.keys(this).map( (key) => {
-	        if( keep_this.indexOf(key) < 0 ) delete this[key];
+	        //if( keep_this.indexOf(key) < 0 ) delete this[key];
 	    });
 	    //console.dir(this, {colors:true});
 	    //console.dir(arguments, {colors:true});
@@ -728,7 +767,7 @@ const Sandbox = {
 					let log = apiref.logstream;
 					let fnkey = key;
 					if( Sandbox.console_trap ){
-						log.write( "type:"+ fnkey +"\t"+ util.format.apply(null, arguments) + '\n');
+						log.write( "type:"+ fnkey +"\t"+ util.format.apply(null, arguments) + '3');
 		  				process.stdout.write("type:"+ fnkey +"\t"+ util.format.apply(null, arguments) + '\n');
 					}else{
 						//Sandbox.console.warn.apply(null, arguments);
@@ -748,14 +787,13 @@ const Sandbox = {
 
 	restore: (msg) => {
 	    Sandbox.console_trap = false;
-	    console.log("== usr end");
+	    console.log("== usr end", msg);
 	    //console.log(msg);
 
 	    process.cwd = cwd;
 
-	    //console.log("@sandbox restore()");
 	    Module._load = Sandbox.module_original_loadFn;
-	    console.log( "@sandbox released" );
+	    console.log( "@sandbox release()" );
 	},
 
 	load_disabled: (request, parent) => {
