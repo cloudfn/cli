@@ -2,7 +2,7 @@ module.exports = function(opts, cb){
 	//console.log("@core.auth opts:", opts);
 	//console.log("@core.auth args:", this.args);
 
-	let key = this.args.query.key || this.args.params.key || '';
+	let key = this.args.key || this.args.key || '';
 
 	if( opts.keys ){
 		console.log("@core.auth>key:", opts.keys, opts.keys.indexOf(key));

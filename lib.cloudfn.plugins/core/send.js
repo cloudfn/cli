@@ -5,7 +5,8 @@ module.exports = function(data){
 	//console.log("@send() ", this.args);
 
 	// obey return format from url-query
-	if( this.args.query.callback ){
+	//if( this.args.query.callback ){
+	if( this.args.callback ){
 
 		console.log("@core.send", "sending jsonp");
 		this.res.set('Content-Type', 'text/javascript');

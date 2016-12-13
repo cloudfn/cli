@@ -3,9 +3,9 @@
     // init if needed
     api.store.data['scores'] = api.store.data['scores'] || {};
 
-    // capture (treat query and params equally)
-    let username  = api.args.query.username  || api.args.params.username || false;
-    let score = api.args.query.score || api.args.params.score || false;
+    // capture
+    let username = api.args.username  || false;
+    let score    = api.args.score     || false;
 
     // debug
     //api.send({"username": username, "score": score, "method": api.method}); return;

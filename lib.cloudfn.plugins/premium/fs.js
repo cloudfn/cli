@@ -6,12 +6,6 @@ var path = require('path');
 
 const FSModule = {
 
-	test: function(){
-		console.log("---------- @prem.fs test", this.root);
-    	//console.dir(this, {colors:true});
-    	console.dir(this.fs, {colors:true});
-	},
-
 	read: function(file, cb){
 		console.log("@prem.fs read:", file);
 		let safeFile = this.getSafePath(file);

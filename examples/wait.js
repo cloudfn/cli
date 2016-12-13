@@ -1,14 +1,13 @@
 (api) => {
 
-	// TODO: disable USER_SCRIPT_LIFETIME kill() when wait() is in progress (up to a certain max?)	
+	let t = api.args.time || 1234;
 
-	console.log("-- wait");
+	console.log("-- wait, time:", t );
 	
 	api.wait( () => {
 		console.log("-- done waiting");
-		api.send("done waiting");
-	//	api.next();
-	}, 1000 );
+		api.send({ok:true, msg:'Done', time:t});
+	}, t );
 	
 }
 	

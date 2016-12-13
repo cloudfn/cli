@@ -343,6 +343,8 @@ const Runner = {
 			//task.logstream = fs.createWriteStream( task.logfile, {flags: 'a'} );
 			task.code( context );
 
+			console.log('@task.exec() done');
+
 		}catch(e){
 			console.log( "Script error:", e.toString() );
 			console.log( e );
@@ -429,37 +431,37 @@ var Context = function(req, res, user, script){
 
 	this.wait = (fn, ms) => {
 		console.log("@api.wait", ms);
-		this.wait_timeout = setTimeout(fn, ms);
+		this._wait_timeout = setTimeout(fn, ms);
 		
-		clearTimeout( this.kill_timeout );
-		this.kill_timeout = setTimeout( this.kill, USER_SCRIPT_LIFETIME + ms);
+		clearTimeout( this._kill_timeout );
+		this._kill_timeout = setTimeout( this._kill, USER_SCRIPT_LIFETIME + ms);
 	}
 
 	
-	this.next = () => {
-		console.log("@api.next");
+	this._next = () => {
+		console.log("@api._next");
 
 		var hrend = process.hrtime( _hrstart);
 		var msg   = util.format("%s %s Completed in %ds %dms", this.method, req.url, hrend[0], hrend[1]/1000000);
 		Sandbox.restore(msg);
 
-		clearTimeout( this.kill_timeout );
+		clearTimeout( this._kill_timeout );
 
 		process.nextTick( () => {
 	   		//task.logstream.end( '@'+ msg +'\n' );
-	   		console.log("@api.next nextTick");
+	   		console.log("@api._next nextTick");
 	   		_res.end();
 	    });
 
 	}
 
-	this.kill = () => {
-		console.log("@api.kill");
-		this.next();
+	this._kill = () => {
+		console.log("@api._kill");
+		this._next();
 	}
 
 	// Allow scripts to run async, for a while
-	this.kill_timeout = setTimeout( this.kill, USER_SCRIPT_LIFETIME);
+	this._kill_timeout = setTimeout( this._kill, USER_SCRIPT_LIFETIME);
 
 	// Load Default plugins	
 	Object.keys(Plugins.default).map( (key) => {
@@ -467,10 +469,6 @@ var Context = function(req, res, user, script){
 		this[key] = Plugins.default[key].bind(this);
 	});
 	
-	/*var r =  require("request");
-	this.jar	= r.jar;
-	this.cookie = r.cookie;*/
-
 	// Load or Mock Premium features
 
 	this.fs = {};
@@ -528,6 +526,217 @@ const Plugins = {
 }
 
 module.exports.plugins = Plugins;
+
+
+/*
+var nativeConsole = console;
+console.log("nativeConsole", nativeConsole);
+
+var cconsole = {
+	log: function(){
+
+		nativeConsole.warn("MOCK", arguments);
+	}
+}
+global.console = cconsole;
+console.log("@test 1");
+cconsole.log("@test 2");
+*/
+
+/// Sandbox
+
+var Module = require("module");
+
+const Sandbox = {
+	module_original_loadFn: Module._load,
+
+	//console: console,
+	use_console_trap: false,
+	console_trap: false,
+
+	clean: function(apiref){
+		console.log("@sandbox clean()");
+
+		Sandbox.console_trap = false;
+
+		//console.dir( apiref );
+		console.dir( Object.keys(this.process).sort() );
+
+	    
+	    var env_bak = this.process.env;
+	    //var keep_process = ['nextTick', '_tickCallback', 'stdout', 'console', 'hrtime', 'emitWarning', 'env'];
+	    var keep_process = [
+  '_needImmediateCallback',
+  '_tickCallback',
+  'cwd',
+  'emitWarning',
+  'env',
+  'hrtime',
+  'nextTick',
+  'platform',
+  'stderr',
+  'stdout',
+
+  '_debugEnd',
+  '_debugPause',
+  '_debugProcess',
+  '_events',
+  '_eventsCount',
+  '_exiting',
+  '_fatalException',
+  '_getActiveHandles',
+  '_getActiveRequests',
+  '_kill',
+  '_linkedBinding',
+  '_maxListeners',
+  '_rawDebug',
+  '_setupDomainUse',
+  '_startProfilerIdleNotifier',
+  '_stopProfilerIdleNotifier',
+  '_tickDomainCallback',
+
+  'abort',
+  'arch',
+  'argv',
+  'argv0',
+  'assert',
+  'binding',
+  'chdir',
+  'config',
+  'cpuUsage',
+  'debugPort',
+  'dlopen',
+  'domain',
+  'execArgv',
+  'execPath',
+  'exit',
+  'features',
+  'getegid',
+  'geteuid',
+  'getgid',
+  'getgroups',
+  'getuid',
+  'initgroups',
+  'kill',
+  'mainModule',
+  'memoryUsage',
+  'moduleLoadList',
+  'openStdin',
+  'pid',
+  'reallyExit',
+  'release',
+  'setegid',
+  'seteuid',
+  'setgid',
+  'setgroups',
+  'setuid',
+  'stdin',
+  'title',
+  'umask',
+  'uptime',
+  'version',
+  'versions'
+  ];
+	    
+	    Object.keys(this.process).map( (key) => {
+	       // if( keep_process.indexOf(key) < 0 ) delete this.process[key];
+	    });
+	    /// PM2 relies on env.MODULE_DEBUG
+	    this.process.env = {MODULE_DEBUG:env_bak.MODULE_DEBUG};
+
+
+	    var delete_from_process = ['abort', 'kill', 'chdir', 'disconnect', 'exit', 
+	    'getegid', 'geteuid', 'getgid', 'getgroups', 'getuid', 'initgroups', 
+	    'setegid', 'seteuid', 'setgid', 'setgroups', 'setuid'];
+	    delete_from_process.map( (key) => {
+	    	delete this.process[key];
+	    });
+
+
+
+
+	    var keep_this = ['console', 'process', 'Buffer', 'setImmediate', 'clearTimeout', 'setTimeout'];
+	    Object.keys(this).map( (key) => {
+	       if( keep_this.indexOf(key) < 0 ) delete this[key];
+	    });
+	    //console.dir(this, {colors:true});
+	    //console.dir(arguments, {colors:true});
+
+	    // Disable require()
+	    Module._load = Sandbox.load_disabled;
+
+		if( Sandbox.use_console_trap ){
+		    // replace process.console with logger, so that the user can 
+		    // write console.log(a,b,c) and have that logged to a file
+		    // in the current script directory
+		    // TODO: provide a method to view / tail them
+			['log', 'info', 'warn', 'error', 'dir'].map( (key) => {
+				console[key] = function(){
+					let log = apiref.logstream;
+					let fnkey = key;
+					if( Sandbox.console_trap ){
+						log.write( "type:"+ fnkey +"\t"+ util.format.apply(null, arguments) + '3');
+		  				process.stdout.write("type:"+ fnkey +"\t"+ util.format.apply(null, arguments) + '\n');
+					}else{
+						//Sandbox.console.warn.apply(null, arguments);
+						process.stdout.write( util.format.apply(null, arguments) + '\n');
+					}
+				}
+			});
+
+			
+			
+			Sandbox.console_trap = true;
+		}
+	   
+
+	   	console.log("== usr begin", apiref.method, '/'+ apiref.user +'/'+ apiref.script);
+	    return [];
+	},
+
+	restore: (msg) => {
+	    Sandbox.console_trap = false;
+	    console.log("== usr end", msg);
+	    //console.log(msg);
+
+	    process.cwd = cwd;
+
+	    Module._load = Sandbox.module_original_loadFn;
+	    console.log( "@sandbox release()" );
+	},
+
+	load_disabled: (request, parent) => {
+	   console.log("@sandbox load_disabled()");
+	    return;
+	},
+
+	load_enabled: (request, parent) => {
+    	console.log("@sandbox load_enabled()");
+	    return Sandbox.module_original_loadFn(request, parent);
+	},
+
+	create: (code) => {
+		return [
+	        'return (api) => {',
+	        '    arguments = api.clean.call(this, api);',
+	        '    // sandbox end',
+	        ''
+	    ].join("\n") +'    //'+ code.trim();
+	}
+}
+module.exports.sandbox = Sandbox;
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /// API
@@ -709,115 +918,3 @@ const API = {
 	}
 }
 module.exports.api = API;
-
-/*
-var nativeConsole = console;
-console.log("nativeConsole", nativeConsole);
-
-var cconsole = {
-	log: function(){
-
-		nativeConsole.warn("MOCK", arguments);
-	}
-}
-global.console = cconsole;
-console.log("@test 1");
-cconsole.log("@test 2");
-*/
-
-/// Sandbox
-
-var Module = require("module");
-
-const Sandbox = {
-	module_original_loadFn: Module._load,
-
-	//console: console,
-	use_console_trap: false,
-	console_trap: false,
-
-	clean: function(apiref){
-		console.log("@sandbox clean()");
-
-		Sandbox.console_trap = false;
-
-		//console.dir( apiref );
-	    
-	    var keep_process = ['nextTick', '_tickCallback', 'stdout', 'console', 'hrtime', 'emitWarning', 'env'];
-	    var env_bak = this.process.env;
-	    Object.keys(this.process).map( (key) => {
-	        //if( keep_process.indexOf(key) < 0 ) delete this.process[key];
-	    });
-	    /// PM2 relies on env.MODULE_DEBUG
-	    this.process.env = {MODULE_DEBUG:env_bak.MODULE_DEBUG};
-
-
-	    var keep_this = ['console', 'process', 'Buffer', 'setImmediate'];
-	    Object.keys(this).map( (key) => {
-	        //if( keep_this.indexOf(key) < 0 ) delete this[key];
-	    });
-	    //console.dir(this, {colors:true});
-	    //console.dir(arguments, {colors:true});
-
-	    // Disable require()
-	    Module._load = Sandbox.load_disabled;
-
-		if( Sandbox.use_console_trap ){
-		    // replace process.console with logger, so that the user can 
-		    // write console.log(a,b,c) and have that logged to a file
-		    // in the current script directory
-		    // TODO: provide a method to view / tail them
-			['log', 'info', 'warn', 'error', 'dir'].map( (key) => {
-				console[key] = function(){
-					let log = apiref.logstream;
-					let fnkey = key;
-					if( Sandbox.console_trap ){
-						log.write( "type:"+ fnkey +"\t"+ util.format.apply(null, arguments) + '3');
-		  				process.stdout.write("type:"+ fnkey +"\t"+ util.format.apply(null, arguments) + '\n');
-					}else{
-						//Sandbox.console.warn.apply(null, arguments);
-						process.stdout.write( util.format.apply(null, arguments) + '\n');
-					}
-				}
-			});
-
-			
-			
-			Sandbox.console_trap = true;
-		}
-	   
-	   	console.log("== usr begin (Method:", apiref.method, ", Dataroot:", apiref.dataroot, ")");
-	    return [];
-	},
-
-	restore: (msg) => {
-	    Sandbox.console_trap = false;
-	    console.log("== usr end", msg);
-	    //console.log(msg);
-
-	    process.cwd = cwd;
-
-	    Module._load = Sandbox.module_original_loadFn;
-	    console.log( "@sandbox release()" );
-	},
-
-	load_disabled: (request, parent) => {
-	   console.log("@sandbox load_disabled()");
-	    return;
-	},
-
-	load_enabled: (request, parent) => {
-    	console.log("@sandbox load_enabled()");
-	    return Sandbox.module_original_loadFn(request, parent);
-	},
-
-	create: (code) => {
-		return [
-	        'return (api) => {',
-	        '    arguments = api.clean.call(this, api);',
-	        '    // sandbox end',
-	        ''
-	    ].join("\n") +'    //'+ code.trim();
-	}
-}
-module.exports.sandbox = Sandbox;

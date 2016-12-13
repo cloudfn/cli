@@ -4,11 +4,11 @@
 
     if( api.method === 'GET' ){
 
-        if( api.args.query.file ){
+        if( api.args.file ){
 
             // read the file
 
-            api.fs.read(api.args.query.file, (err, data) => {
+            api.fs.read(api.args.file, (err, data) => {
                 console.log( "-- fs read result:", err, data);
                 if(err){
                     api.send({ok:false, msg:data});
@@ -29,7 +29,7 @@
 
     if( api.method === 'POST' ){
         
-        api.fs.write( api.args.fields.file, api.args.fields.data, (err, data) => {
+        api.fs.write( api.args.file, api.args.data, (err, data) => {
         	console.log( "-- fs write result:", err, data);
             if(err){
                 api.send({ok:false, msg:data});

@@ -37,7 +37,7 @@ module.exports = function(opts, cb){
 				cb({ok:false, msg:err, url:url, timeout:USER_SOCKET_TIMEOUT});
 			}
 
-			this.next();
+			this._next();
 
 		}else{
 			cb(body);

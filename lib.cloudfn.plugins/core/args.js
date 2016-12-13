@@ -80,8 +80,13 @@ module.exports = function(req){
 		? args.headers.referer
 		: '';
 
+	//good. Now, combine all user-provided args to args.data
+	var collection = Object.assign({}, args.query, args.params, args.fields, args.body, args.files);
+	//collection.headers = args.headers;
+	collection.origin = args.origin;
 
-	console.log("@core.args [END]:", args);
-	//console.dir( args, {colors:true} );
-	return args;
+	//console.log("@core.args [END] args:", args);
+	console.log("@core.args [END] collection:", collection);
+	
+	return collection;
 }

@@ -6,8 +6,8 @@
     console.dir(api.store, {colors:true});
 
     /// Harvest vars from the script arguments:
-    let user  = api.args.query.user  || api.args.params.user;
-    let score = api.args.query.score || api.args.params.score;
+    let user  = api.args.user;
+    let score = api.args.score;
 
     /// Read or init the 'users' object
     api.store.data['users'] = api.store.data['users'] || {};
