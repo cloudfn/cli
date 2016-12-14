@@ -24,7 +24,8 @@
     "prompt": "^1.0.0",
     "rand-token": "^0.2.1",
     "request": "^2.78.0",
-    "tmp": "0.0.30"
+    "tmp": "0.0.30",
+    "update-notifier": "^1.0.3"
   },
   "preferGlobal": true,
   "readme": "README.md",

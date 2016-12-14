@@ -11,12 +11,16 @@ var colors 		= require('colors/safe');
 var isemail 	= require('isemail');
 var esrever 	= require('esrever');
 var hashObject  = require('hash-object');
+var updateNote  = require('update-notifier');
+
 
 var pkg     	= require('./package.json');
 
 var debug 		= true;
 var remote  	= 'http://localhost:3033';
 //var remote  	= 'http://cloudfn.stream';
+
+updateNote({pkg}).notify();
 
 var cloudfn 	= null;
 try {
