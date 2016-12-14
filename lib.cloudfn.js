@@ -1,6 +1,6 @@
 // js@base.io
 
-const VERSION 			= '0.0.2';
+const VERSION 			= '0.0.3';
 const TASKDIRECTORY 	= __dirname + '/tasks';
 const PLUGINSDIRECTORY 	= __dirname + '/lib.cloudfn.plugins';
 const USER_SCRIPT_LIFETIME = 4000;
