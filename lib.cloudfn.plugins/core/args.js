@@ -48,6 +48,7 @@ module.exports = function(req){
 		//console.log("keyvalue", keyvalue);
 		args.params = keyvalue;
 	}
+	args.param_keys = Object.keys(args.params);
 
 	//console.log("@core.args req.query:");
 	//console.dir( req.query, {colors:true} );
@@ -84,6 +85,7 @@ module.exports = function(req){
 	var collection = Object.assign({}, args.query, args.params, args.fields, args.body, args.files);
 	//collection.headers = args.headers;
 	collection.origin = args.origin;
+	collection.raw    = args;
 
 	//console.log("@core.args [END] args:", args);
 	console.log("@core.args [END] collection:", collection);

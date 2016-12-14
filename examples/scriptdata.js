@@ -6,5 +6,5 @@
 
 	console.log( "args", api.args );
 
-	api.send({ok:true, data:{} });
+	api.send({ok:true, data:api.args });
 }

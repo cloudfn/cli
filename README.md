@@ -13,17 +13,50 @@ and call the resulting URL to get/set your data.
 
 ## Installation
 
-  (sudo) npm install cloudfn-cli -g
+```
+(sudo) npm install cloudfn-cli -g
+```
 
 This adds the `cfn` command to your `$PATH`  
 (actually an alias to /usr/bin/node_modules/cloudfn-cli/bin)  
 so it's useable from anywhere.
 
-The examples folder (`/usr/bin/node_modules/cloudfn-cli/examples` or [https://github.com/cloudfn/cli/tree/master/examples](https://github.com/cloudfn/cli/tree/master/examples) contain, well, examples of how these "cloud functions" look, and what they can do.
-
-#### Updates
+#### Update
 
 There will be a few... just `npm install` again.
+
+
+## Hello World
+
+```javascript
+(api) => {
+  api.send('Hello World');
+}
+```
+
+Or, in traditional javascript:
+
+```javascript
+function(api) {
+  api.send('Hello World');
+}
+```
+All scripts should have this signature,  
+and all your code needs to live inside this closure.
+
+The [api]() argument is an object with a (growing) collection of methods you will use to interact with the your users.
+
+`api.send()` is one such method. If you prefer to speak JSON, just do.
+
+```javascript
+(api) => {
+  api.send({message:'Hello World'});
+}
+```
+
+
+The examples folder (`/usr/bin/node_modules/cloudfn-cli/examples` or [https://github.com/cloudfn/cli/tree/master/examples](https://github.com/cloudfn/cli/tree/master/examples) contain, well, examples of how these "cloud functions" look, and what they can do.
+
 
 ## Usage
 
@@ -31,14 +64,17 @@ The commandline is the primary means of interacting with the **cloudfn service**
 
 The basic interaction follows this pattern:
 
-  $ cfn <command> <args>
-
+```
+$ cfn <command> <args>
+```
 
 ## Signup
 
 The first thing you want to do, is to signup.
 
-  $ cfn user
+```
+$ cfn user
+```
 
 This will prompt for a  
 - *username*  
@@ -55,14 +91,16 @@ The combination of *username*, *email* and *password* will be hashed to form you
 The password is not stored, and is never sent to the server.  
 (Which means you need to type it everytime you interact... Let us know in [this issue](https://github.com/cloudfn/cli/issues/1) if that is too tedious.)
 
-Read our [privacy]() and [authentication]() docs for additional details.
+Read our [privacy]() and [cli-authentication]() docs for additional details.
 
 
 ## Commands
 
 #### Add
 
-  $ cfn add <scriptfile>
+```
+$ cfn add <scriptfile>
+```
 
 e.g: `$ cfn add examples/hello.js`
 
@@ -85,7 +123,9 @@ and can be called like any other web api, or as a script:
 
 #### Test
 
-  $ cfn test <scriptfile>
+```
+$ cfn test <scriptfile>
+```
 
 e.g: `$ cfn test examples/hello.js`
 
@@ -94,13 +134,17 @@ Compiles the script, to verify that it is ok.
 
 #### List
 
-  $ cfn ls
+```
+$ cfn ls
+```
 
 Will show wich script you have uploaded to your "account".
 
 #### Remove
 
-  $ cfn rm <scriptname>
+```
+$ cfn rm <scriptname>
+```
 
 Remove (there's no undo) the script from your "account".  
 (Use a scriptname from `$ cfn ls`.)
@@ -112,7 +156,9 @@ For convenience, the cli includes some commands to make working with the cloudfn
 
 #### Call
 
-  $ cfn call <scripturl> <args>
+```
+$ cfn call <scripturl> <args>
+```
 
 Issues a HTTP GET request to the <scripturl>.  
 e.g: `$ cfn call js/counter `
@@ -127,6 +173,8 @@ Feel free to use [httpie](), [postman]() or [curl]() for commandline testing ins
 
 #### Token
 
-  $ cfn token
+```
+$ cfn token
+```
 
 Generates a unique fairly random token suitable for use with the [auth]() feature.

@@ -560,7 +560,7 @@ const Sandbox = {
 		Sandbox.console_trap = false;
 
 		//console.dir( apiref );
-		console.dir( Object.keys(this.process).sort() );
+		//console.dir( Object.keys(this.process).sort() );
 
 	    
 	    var env_bak = this.process.env;
@@ -649,7 +649,7 @@ const Sandbox = {
 	    'getegid', 'geteuid', 'getgid', 'getgroups', 'getuid', 'initgroups', 
 	    'setegid', 'seteuid', 'setgid', 'setgroups', 'setuid'];
 	    delete_from_process.map( (key) => {
-	    	delete this.process[key];
+	    	//delete this.process[key];
 	    });
 
 
@@ -657,7 +657,7 @@ const Sandbox = {
 
 	    var keep_this = ['console', 'process', 'Buffer', 'setImmediate', 'clearTimeout', 'setTimeout'];
 	    Object.keys(this).map( (key) => {
-	       if( keep_this.indexOf(key) < 0 ) delete this[key];
+	       //if( keep_this.indexOf(key) < 0 ) delete this[key];
 	    });
 	    //console.dir(this, {colors:true});
 	    //console.dir(arguments, {colors:true});
