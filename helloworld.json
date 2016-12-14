@@ -1,0 +1,2890 @@
+{
+  "version": 1,
+  "height": 19,
+  "stdout": [
+    [
+      0.039668,
+      "\u001b]0;js@ops-xps: ~/repos/cloudfn-cli\u0007\u001b[01;32mjs\u001b[01;34m ➜ \u001b[00m "
+    ],
+    [
+      2.9161,
+      "s"
+    ],
+    [
+      0.079756,
+      "u"
+    ],
+    [
+      0.154328,
+      "d"
+    ],
+    [
+      0.498981,
+      "o"
+    ],
+    [
+      0.151811,
+      " "
+    ],
+    [
+      0.482439,
+      "n"
+    ],
+    [
+      0.273926,
+      "p"
+    ],
+    [
+      0.301979,
+      "m"
+    ],
+    [
+      0.177227,
+      " "
+    ],
+    [
+      0.245817,
+      "-"
+    ],
+    [
+      0.655324,
+      "\b\u001b[K"
+    ],
+    [
+      0.240989,
+      "i"
+    ],
+    [
+      0.25268,
+      " "
+    ],
+    [
+      0.172606,
+      "-"
+    ],
+    [
+      0.260205,
+      "g"
+    ],
+    [
+      0.417172,
+      " "
+    ],
+    [
+      0.818742,
+      "c"
+    ],
+    [
+      0.087092,
+      "l"
+    ],
+    [
+      0.280906,
+      "o"
+    ],
+    [
+      0.070402,
+      "u"
+    ],
+    [
+      0.192756,
+      "d"
+    ],
+    [
+      0.291947,
+      "f"
+    ],
+    [
+      0.107147,
+      "n"
+    ],
+    [
+      0.515486,
+      "-"
+    ],
+    [
+      0.250987,
+      "c"
+    ],
+    [
+      0.146945,
+      "l"
+    ],
+    [
+      0.074255,
+      "i"
+    ],
+    [
+      0.732447,
+      "\r\n"
+    ],
+    [
+      0.003182,
+      "[sudo] password for js: "
+    ],
+    [
+      2.146454,
+      "\r\n"
+    ],
+    [
+      0.44435,
+      "\u001b[?25l"
+    ],
+    [
+      0.006992,
+      "[\u001b[90m..................\u001b[0m] - normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.04239,
+      "[\u001b[90m..................\u001b[0m] - normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.049982,
+      "[\u001b[90m..................\u001b[0m] - normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.050143,
+      "[\u001b[90m..................\u001b[0m] - normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.050202,
+      "[\u001b[90m..................\u001b[0m] - normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.049829,
+      "[\u001b[90m..................\u001b[0m] - normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.049945,
+      "[\u001b[90m..................\u001b[0m] \\ normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.05055,
+      "[\u001b[90m..................\u001b[0m] \\ normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.0502,
+      "[\u001b[90m..................\u001b[0m] \\ normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.050755,
+      "[\u001b[90m..................\u001b[0m] \\ normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.051984,
+      "[\u001b[90m..................\u001b[0m] \\ normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.048049,
+      "[\u001b[90m..................\u001b[0m] | normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.050813,
+      "[\u001b[90m..................\u001b[0m] | normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.050152,
+      "[\u001b[90m..................\u001b[0m] | normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.050024,
+      "[\u001b[90m..................\u001b[0m] | normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.050032,
+      "[\u001b[90m..................\u001b[0m] | normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.049733,
+      "[\u001b[90m..................\u001b[0m] / normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.050544,
+      "[\u001b[90m..................\u001b[0m] / normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.049673,
+      "[\u001b[90m..................\u001b[0m] / normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.050706,
+      "[\u001b[90m..................\u001b[0m] / normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.049628,
+      "[\u001b[90m..................\u001b[0m] / normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.049756,
+      "[\u001b[90m..................\u001b[0m] - normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.050495,
+      "[\u001b[90m..................\u001b[0m] - normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.049504,
+      "[\u001b[90m..................\u001b[0m] - normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.05081,
+      "[\u001b[90m..................\u001b[0m] - normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.049924,
+      "[\u001b[90m..................\u001b[0m] - normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.049668,
+      "[\u001b[90m..................\u001b[0m] \\ normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.049572,
+      "[\u001b[90m..................\u001b[0m] \\ normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.051705,
+      "[\u001b[90m..................\u001b[0m] \\ normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.048746,
+      "[\u001b[90m..................\u001b[0m] \\ normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.049821,
+      "[\u001b[90m..................\u001b[0m] \\ normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.04997,
+      "[\u001b[90m..................\u001b[0m] | normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.049518,
+      "[\u001b[90m..................\u001b[0m] | normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.050767,
+      "[\u001b[90m..................\u001b[0m] | normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.050544,
+      "[\u001b[90m..................\u001b[0m] | normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.049701,
+      "[\u001b[90m..................\u001b[0m] | normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.049905,
+      "[\u001b[90m..................\u001b[0m] / normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.050066,
+      "[\u001b[90m..................\u001b[0m] / normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.049765,
+      "[\u001b[90m..................\u001b[0m] / normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.049527,
+      "[\u001b[90m..................\u001b[0m] / normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.050666,
+      "[\u001b[90m..................\u001b[0m] / normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.049724,
+      "[\u001b[90m..................\u001b[0m] - normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.049591,
+      "[\u001b[90m..................\u001b[0m] - normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.050568,
+      "[\u001b[90m..................\u001b[0m] - normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.049602,
+      "[\u001b[90m..................\u001b[0m] - normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.051052,
+      "[\u001b[90m..................\u001b[0m] - normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.049516,
+      "[\u001b[90m..................\u001b[0m] \\ normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.050479,
+      "[\u001b[90m..................\u001b[0m] \\ normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.049631,
+      "[\u001b[90m..................\u001b[0m] \\ normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.050748,
+      "[\u001b[90m..................\u001b[0m] \\ normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.049553,
+      "[\u001b[90m..................\u001b[0m] \\ normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.049742,
+      "[\u001b[90m..................\u001b[0m] | normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.050729,
+      "[\u001b[90m..................\u001b[0m] | normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.049523,
+      "[\u001b[90m..................\u001b[0m] | normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.051705,
+      "[\u001b[90m..................\u001b[0m] | normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.05,
+      "[\u001b[90m..................\u001b[0m] | normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.049683,
+      "[\u001b[90m..................\u001b[0m] / normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.049503,
+      "[\u001b[90m..................\u001b[0m] / normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.050574,
+      "[\u001b[90m..................\u001b[0m] / normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.049491,
+      "[\u001b[90m..................\u001b[0m] / normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.050624,
+      "[\u001b[90m..................\u001b[0m] / normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.050688,
+      "[\u001b[90m..................\u001b[0m] - normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.049612,
+      "[\u001b[90m..................\u001b[0m] - normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.050693,
+      "[\u001b[90m..................\u001b[0m] - normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.049759,
+      "[\u001b[90m..................\u001b[0m] - normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.049702,
+      "[\u001b[90m..................\u001b[0m] - normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.049787,
+      "[\u001b[90m..................\u001b[0m] \\ normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.050576,
+      "[\u001b[90m..................\u001b[0m] \\ normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.049805,
+      "[\u001b[90m..................\u001b[0m] \\ normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.049535,
+      "[\u001b[90m..................\u001b[0m] \\ normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.051985,
+      "[\u001b[90m..................\u001b[0m] \\ normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.048318,
+      "[\u001b[90m..................\u001b[0m] | normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.051027,
+      "[\u001b[90m..................\u001b[0m] | normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.049495,
+      "[\u001b[90m..................\u001b[0m] | normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.050412,
+      "[\u001b[90m..................\u001b[0m] | normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.051093,
+      "[\u001b[90m..................\u001b[0m] | normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.049589,
+      "[\u001b[90m..................\u001b[0m] / normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.051028,
+      "[\u001b[90m..................\u001b[0m] / normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.050758,
+      "[\u001b[90m..................\u001b[0m] / normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.049287,
+      "[\u001b[90m..................\u001b[0m] / normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.049788,
+      "[\u001b[90m..................\u001b[0m] / normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.049846,
+      "[\u001b[90m..................\u001b[0m] - normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.050789,
+      "[\u001b[90m..................\u001b[0m] - normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.048557,
+      "[\u001b[90m..................\u001b[0m] - normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.051156,
+      "[\u001b[90m..................\u001b[0m] - normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.049664,
+      "[\u001b[90m..................\u001b[0m] - normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.05091,
+      "[\u001b[90m..................\u001b[0m] \\ normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.048653,
+      "[\u001b[90m..................\u001b[0m] \\ normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.05069,
+      "[\u001b[90m..................\u001b[0m] \\ normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.0496,
+      "[\u001b[90m..................\u001b[0m] \\ normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.051002,
+      "[\u001b[90m..................\u001b[0m] \\ normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.048898,
+      "[\u001b[90m..................\u001b[0m] | normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.049724,
+      "[\u001b[90m..................\u001b[0m] | normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.050913,
+      "[\u001b[90m..................\u001b[0m] | normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.050511,
+      "[\u001b[90m..................\u001b[0m] | normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.05096,
+      "[\u001b[90m..................\u001b[0m] | normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.048678,
+      "[\u001b[90m..................\u001b[0m] / normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.049648,
+      "[\u001b[90m..................\u001b[0m] / normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.050784,
+      "[\u001b[90m..................\u001b[0m] / normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.049731,
+      "[\u001b[90m..................\u001b[0m] / normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.04976,
+      "[\u001b[90m..................\u001b[0m] / normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.049873,
+      "[\u001b[90m..................\u001b[0m] - normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.050753,
+      "[\u001b[90m..................\u001b[0m] - normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.049579,
+      "[\u001b[90m..................\u001b[0m] - normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.05073,
+      "[\u001b[90m..................\u001b[0m] - normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.049945,
+      "[\u001b[90m..................\u001b[0m] - normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.0503,
+      "[\u001b[90m..................\u001b[0m] \\ normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.050057,
+      "[\u001b[90m..................\u001b[0m] \\ normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.050396,
+      "[\u001b[90m..................\u001b[0m] \\ normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.050069,
+      "[\u001b[90m..................\u001b[0m] \\ normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.050923,
+      "[\u001b[90m..................\u001b[0m] \\ normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.050012,
+      "[\u001b[90m..................\u001b[0m] | normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.06263,
+      "[\u001b[90m..................\u001b[0m] | normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.050224,
+      "[\u001b[90m..................\u001b[0m] | normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.050581,
+      "[\u001b[90m..................\u001b[0m] | normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.049611,
+      "[\u001b[90m..................\u001b[0m] / normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.053893,
+      "[\u001b[90m..................\u001b[0m] - normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.051124,
+      "[\u001b[90m..................\u001b[0m] - normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.054052,
+      "[\u001b[90m..................\u001b[0m] - normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.132594,
+      "[\u001b[90m..................\u001b[0m] - normalizeTree: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadCurrentTree\u001b[K\r"
+    ],
+    [
+      0.105921,
+      "[\u001b[7m   \u001b[27m\u001b[90m...............\u001b[0m] \\ cloneCurrentTree: \u001b[7msill\u001b[0m \u001b[35mcloneCurrentTree\u001b[0m Finishing\u001b[K\r"
+    ],
+    [
+      0.052718,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] / fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049638,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] | fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050583,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] | fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050643,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] | fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049558,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] | fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050233,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] / fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049887,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] / fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050082,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] / fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049756,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] / fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049847,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] \\ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.053256,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] | fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.046883,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] | fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049825,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] | fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049571,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] / fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050164,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] \\ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050782,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] | fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.0496,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] | fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050017,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] - fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049579,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] | fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050608,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] | fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.05075,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] / fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050329,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] / fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050413,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] / fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050735,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] / fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050559,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] / fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.048501,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] - fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.05058,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] - fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049694,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] - fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049582,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] - fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050571,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] - fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050315,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] \\ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.05071,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] \\ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050586,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] \\ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049278,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] \\ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050926,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] \\ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049042,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] | fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049733,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] | fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049861,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] \\ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.051026,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] \\ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049986,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] \\ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049673,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] | fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.051276,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] | fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049901,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] | fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.048501,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] | fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049739,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] | fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050734,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] / fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050653,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] / fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049921,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] / fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050079,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] / fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049738,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] / fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.051537,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] - fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050696,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] - fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.048631,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] - fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050849,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] - fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049683,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] - fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049885,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] \\ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049714,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] \\ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050528,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] \\ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.04959,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] \\ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050844,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] \\ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050599,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] | fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049443,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] | fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050643,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] | fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050483,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] | fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050544,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] | fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050758,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] / fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049578,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] / fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050487,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] / fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050328,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] / fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050059,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] / fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049993,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] - fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049932,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] - fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049481,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] - fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049559,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] - fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050809,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] - fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.057206,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] \\ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050773,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] \\ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049687,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] \\ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049902,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] \\ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049628,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] \\ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.05097,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] | fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.053534,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] | fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.046487,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] | fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.051359,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] | fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.05025,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] | fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049755,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] / fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049467,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] / fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050473,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] / fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049553,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] / fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050529,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] / fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049978,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] - fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050337,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] - fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049598,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] - fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.051063,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] - fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049764,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] - fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050754,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] \\ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.05061,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] \\ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.04964,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] \\ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050435,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] \\ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049762,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] \\ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050644,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] | fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049449,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] | fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050802,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] | fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.05013,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] | fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049754,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] | fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050018,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] / fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050566,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] / fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049545,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] / fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050508,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] / fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.051512,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] / fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049347,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] - fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.04967,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] - fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.051367,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] - fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050562,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] - fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050082,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] - fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.05049,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] \\ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.04967,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] \\ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049716,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] \\ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.05065,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] \\ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049584,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] \\ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049784,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] | fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050559,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] | fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049571,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] | fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050431,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] | fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049594,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] | fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049852,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] / fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.051045,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] / fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049623,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] / fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049651,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] / fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049408,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] / fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050664,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] - fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049637,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] - fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050669,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] - fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050531,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] - fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049469,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] - fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050843,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] \\ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050845,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] \\ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.048464,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] \\ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050483,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] \\ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049492,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] \\ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050822,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] | fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.053851,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] | fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.046846,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] | fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049512,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] | fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049459,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] | fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049908,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] / fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049636,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] / fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050644,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] / fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049807,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] / fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049561,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] / fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050751,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] - fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050462,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] - fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050547,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] - fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050442,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] - fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.051009,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] - fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.04962,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] \\ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050713,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] \\ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049778,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] \\ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049824,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] \\ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050653,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] \\ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050735,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] | fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.05002,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] | fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049725,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] | fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050919,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] | fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050718,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] | fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050799,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] / fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050993,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] / fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049061,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] / fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049824,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] / fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.04946,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] / fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050782,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] - fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050673,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] - fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049834,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] - fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049644,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] - fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050543,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] - fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049768,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] \\ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050504,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] \\ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050555,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] \\ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049474,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] \\ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050701,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] \\ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050856,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] | fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049504,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] | fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.051533,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] | fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049415,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] | fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050614,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] | fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049789,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] / fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050702,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] / fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050461,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] / fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049824,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] / fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050664,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] / fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.0509,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] - fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049908,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] - fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049824,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] - fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.04992,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] - fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049603,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] - fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.052655,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] \\ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.047591,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] \\ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050558,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] \\ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050814,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] \\ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049486,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] \\ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.04967,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] | fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050481,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] | fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049658,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] | fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050595,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] | fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049778,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] | fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049855,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] / fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050714,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] / fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050619,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] / fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049663,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] / fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.051033,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] / fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050017,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] - fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.05473,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] \\ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050761,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] \\ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050608,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] \\ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.051228,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] - fetchMetadata: \u001b[34;40mverb\u001b[0m \u001b[35mafterAdd\u001b[0m /home/js/.npm/iconv-lite/0.\u001b[K\r"
+    ],
+    [
+      0.048784,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] | fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050426,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] \\ fetchMetadata: \u001b[34;40mverb\u001b[0m \u001b[35mafterAdd\u001b[0m /home/js/.npm/statuses/1.3.\u001b[K\r"
+    ],
+    [
+      0.05114,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] \\ fetchMetadata: \u001b[34;40mverb\u001b[0m \u001b[35mafterAdd\u001b[0m /home/js/.npm/ee-first/1.1.\u001b[K\r"
+    ],
+    [
+      0.050738,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] | fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050109,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] | fetchMetadata: \u001b[34;40mverb\u001b[0m \u001b[35mafterAdd\u001b[0m /home/js/.npm/mime-types/2.\u001b[K\r"
+    ],
+    [
+      0.050541,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] / fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049944,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] - fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050626,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] - fetchMetadata: \u001b[34;40mverb\u001b[0m \u001b[35mafterAdd\u001b[0m /home/js/.npm/strip-ansi/3.\u001b[K\r"
+    ],
+    [
+      0.051272,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] - fetchMetadata: \u001b[34;40mverb\u001b[0m \u001b[35mafterAdd\u001b[0m /home/js/.npm/strip-ansi/3.\u001b[K\r"
+    ],
+    [
+      0.049658,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] - fetchMetadata: \u001b[34;40mverb\u001b[0m \u001b[35mafterAdd\u001b[0m /home/js/.npm/strip-ansi/3.\u001b[K\r"
+    ],
+    [
+      0.049802,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] - fetchMetadata: \u001b[34;40mverb\u001b[0m \u001b[35mafterAdd\u001b[0m /home/js/.npm/strip-ansi/3.\u001b[K\r"
+    ],
+    [
+      0.050282,
+      "[\u001b[7m    \u001b[27m\u001b[90m..............\u001b[0m] \\ fetchMetadata: \u001b[34;40mverb\u001b[0m \u001b[35mafterAdd\u001b[0m /home/js/.npm/ansi-regex/2.\u001b[K\r"
+    ],
+    [
+      0.049529,
+      "[\u001b[7m     \u001b[27m\u001b[90m.............\u001b[0m] | fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049691,
+      "[\u001b[7m     \u001b[27m\u001b[90m.............\u001b[0m] \\ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050979,
+      "[\u001b[7m     \u001b[27m\u001b[90m.............\u001b[0m] - fetchMetadata: \u001b[34;40mverb\u001b[0m \u001b[35mafterAdd\u001b[0m /home/js/.npm/wrappy/1.0.2/\u001b[K\r"
+    ],
+    [
+      0.051079,
+      "[\u001b[7m     \u001b[27m\u001b[90m.............\u001b[0m] - fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050155,
+      "[\u001b[7m     \u001b[27m\u001b[90m.............\u001b[0m] | fetchMetadata: \u001b[34;40mverb\u001b[0m \u001b[35mafterAdd\u001b[0m /home/js/.npm/balanced-matc\u001b[K\r"
+    ],
+    [
+      0.051226,
+      "[\u001b[7m      \u001b[27m\u001b[90m............\u001b[0m] | fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.051481,
+      "[\u001b[7m      \u001b[27m\u001b[90m............\u001b[0m] | fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.052493,
+      "[\u001b[7m      \u001b[27m\u001b[90m............\u001b[0m] | fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.047992,
+      "[\u001b[7m      \u001b[27m\u001b[90m............\u001b[0m] / fetchMetadata: \u001b[34;40mverb\u001b[0m \u001b[35mafterAdd\u001b[0m /home/js/.npm/utile/0.3.0/p\u001b[K\r"
+    ],
+    [
+      0.050086,
+      "[\u001b[7m      \u001b[27m\u001b[90m............\u001b[0m] / fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049095,
+      "[\u001b[7m      \u001b[27m\u001b[90m............\u001b[0m] | fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.051045,
+      "[\u001b[7m      \u001b[27m\u001b[90m............\u001b[0m] / fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049659,
+      "[\u001b[7m      \u001b[27m\u001b[90m............\u001b[0m] / fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.04978,
+      "[\u001b[7m      \u001b[27m\u001b[90m............\u001b[0m] / fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049704,
+      "[\u001b[7m      \u001b[27m\u001b[90m............\u001b[0m] - fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050685,
+      "[\u001b[7m      \u001b[27m\u001b[90m............\u001b[0m] - fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049642,
+      "[\u001b[7m      \u001b[27m\u001b[90m............\u001b[0m] - fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050855,
+      "[\u001b[7m      \u001b[27m\u001b[90m............\u001b[0m] - fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050684,
+      "[\u001b[7m      \u001b[27m\u001b[90m............\u001b[0m] - fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050032,
+      "[\u001b[7m      \u001b[27m\u001b[90m............\u001b[0m] \\ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050495,
+      "[\u001b[7m      \u001b[27m\u001b[90m............\u001b[0m] \\ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049345,
+      "[\u001b[7m      \u001b[27m\u001b[90m............\u001b[0m] \\ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049698,
+      "[\u001b[7m      \u001b[27m\u001b[90m............\u001b[0m] \\ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050326,
+      "[\u001b[7m      \u001b[27m\u001b[90m............\u001b[0m] \\ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.063536,
+      "[\u001b[7m      \u001b[27m\u001b[90m............\u001b[0m] | fetchMetadata: \u001b[34;40mverb\u001b[0m \u001b[35mcache add\u001b[0m spec pkginfo@0.3.x\u001b[K\r"
+    ],
+    [
+      0.048986,
+      "[\u001b[7m      \u001b[27m\u001b[90m............\u001b[0m] / fetchMetadata: \u001b[34;40mverb\u001b[0m \u001b[35mcache add\u001b[0m spec pkginfo@0.3.x\u001b[K\r"
+    ],
+    [
+      0.063316,
+      "[\u001b[7m      \u001b[27m\u001b[90m............\u001b[0m] | fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050536,
+      "[\u001b[7m      \u001b[27m\u001b[90m............\u001b[0m] | fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.060458,
+      "[\u001b[7m      \u001b[27m\u001b[90m............\u001b[0m] / fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050076,
+      "[\u001b[7m      \u001b[27m\u001b[90m............\u001b[0m] \\ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050396,
+      "[\u001b[7m      \u001b[27m\u001b[90m............\u001b[0m] | fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049532,
+      "[\u001b[7m      \u001b[27m\u001b[90m............\u001b[0m] - fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050448,
+      "[\u001b[7m      \u001b[27m\u001b[90m............\u001b[0m] - fetchMetadata: \u001b[34;40mverb\u001b[0m \u001b[35mafterAdd\u001b[0m /home/js/.npm/tough-cookie/\u001b[K\r"
+    ],
+    [
+      0.05102,
+      "[\u001b[7m      \u001b[27m\u001b[90m............\u001b[0m] \\ fetchMetadata: \u001b[34;40mverb\u001b[0m \u001b[35mafterAdd\u001b[0m /home/js/.npm/delayed-strea\u001b[K\r"
+    ],
+    [
+      0.048594,
+      "[\u001b[7m      \u001b[27m\u001b[90m............\u001b[0m] / fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049207,
+      "[\u001b[7m      \u001b[27m\u001b[90m............\u001b[0m] / fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050899,
+      "[\u001b[7m      \u001b[27m\u001b[90m............\u001b[0m] / fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050002,
+      "[\u001b[7m      \u001b[27m\u001b[90m............\u001b[0m] - fetchMetadata: \u001b[34;40mverb\u001b[0m \u001b[35mafterAdd\u001b[0m /home/js/.npm/jsonpointer/4\u001b[K\r"
+    ],
+    [
+      0.05006,
+      "[\u001b[7m      \u001b[27m\u001b[90m............\u001b[0m] \\ fetchMetadata: \u001b[34;40mverb\u001b[0m \u001b[35mafterAdd\u001b[0m /home/js/.npm/is-property/1\u001b[K\r"
+    ],
+    [
+      0.050435,
+      "[\u001b[7m      \u001b[27m\u001b[90m............\u001b[0m] \\ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.0521,
+      "[\u001b[7m      \u001b[27m\u001b[90m............\u001b[0m] - fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.051013,
+      "[\u001b[7m      \u001b[27m\u001b[90m............\u001b[0m] / fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049968,
+      "[\u001b[7m      \u001b[27m\u001b[90m............\u001b[0m] - fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.051364,
+      "[\u001b[7m      \u001b[27m\u001b[90m............\u001b[0m] | fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049129,
+      "[\u001b[7m      \u001b[27m\u001b[90m............\u001b[0m] \\ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049485,
+      "[\u001b[7m      \u001b[27m\u001b[90m............\u001b[0m] - fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049938,
+      "[\u001b[7m      \u001b[27m\u001b[90m............\u001b[0m] \\ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050277,
+      "[\u001b[7m      \u001b[27m\u001b[90m............\u001b[0m] \\ fetchMetadata: \u001b[34;40mverb\u001b[0m \u001b[35mafterAdd\u001b[0m /home/js/.npm/assert-plus/1\u001b[K\r"
+    ],
+    [
+      0.050251,
+      "[\u001b[7m      \u001b[27m\u001b[90m............\u001b[0m] - fetchMetadata: \u001b[34;40mverb\u001b[0m \u001b[35mafterAdd\u001b[0m /home/js/.npm/assert-plus/1\u001b[K\r"
+    ],
+    [
+      0.050051,
+      "[\u001b[7m      \u001b[27m\u001b[90m............\u001b[0m] | fetchMetadata: \u001b[34;40mverb\u001b[0m \u001b[35mafterAdd\u001b[0m /home/js/.npm/punycode/1.4.\u001b[K\r"
+    ],
+    [
+      0.049549,
+      "[\u001b[7m       \u001b[27m\u001b[90m...........\u001b[0m] \\ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050281,
+      "[\u001b[7m       \u001b[27m\u001b[90m...........\u001b[0m] \\ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050719,
+      "[\u001b[7m       \u001b[27m\u001b[90m...........\u001b[0m] \\ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.048614,
+      "[\u001b[7m       \u001b[27m\u001b[90m...........\u001b[0m] \\ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.055268,
+      "[\u001b[7m       \u001b[27m\u001b[90m...........\u001b[0m] / fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.04979,
+      "[\u001b[7m       \u001b[27m\u001b[90m...........\u001b[0m] / fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049909,
+      "[\u001b[7m       \u001b[27m\u001b[90m...........\u001b[0m] / fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050724,
+      "[\u001b[7m       \u001b[27m\u001b[90m...........\u001b[0m] | fetchMetadata: \u001b[34;40mverb\u001b[0m \u001b[35mafterAdd\u001b[0m /home/js/.npm/number-is-nan\u001b[K\r"
+    ],
+    [
+      0.050714,
+      "[\u001b[7m       \u001b[27m\u001b[90m...........\u001b[0m] / fetchMetadata: \u001b[34;40mverb\u001b[0m \u001b[35mafterAdd\u001b[0m /home/js/.npm/number-is-nan\u001b[K\r"
+    ],
+    [
+      0.04941,
+      "[\u001b[7m       \u001b[27m\u001b[90m...........\u001b[0m] \\ fetchMetadata: \u001b[34;40mverb\u001b[0m \u001b[35mcache add\u001b[0m spec uuid@^2.0.1\u001b[K\r"
+    ],
+    [
+      0.049548,
+      "[\u001b[7m       \u001b[27m\u001b[90m...........\u001b[0m] | fetchMetadata: \u001b[34;40mverb\u001b[0m \u001b[35mcache add\u001b[0m spec uuid@^2.0.1\u001b[K\r"
+    ],
+    [
+      0.050568,
+      "[\u001b[7m       \u001b[27m\u001b[90m...........\u001b[0m] | fetchMetadata: \u001b[34;40mverb\u001b[0m \u001b[35mafterAdd\u001b[0m /home/js/.npm/graceful-fs/4\u001b[K\r"
+    ],
+    [
+      0.049568,
+      "[\u001b[7m       \u001b[27m\u001b[90m...........\u001b[0m] | fetchMetadata: \u001b[34;40mverb\u001b[0m \u001b[35mafterAdd\u001b[0m /home/js/.npm/graceful-fs/4\u001b[K\r"
+    ],
+    [
+      0.049583,
+      "[\u001b[7m       \u001b[27m\u001b[90m...........\u001b[0m] | fetchMetadata: \u001b[34;40mverb\u001b[0m \u001b[35mafterAdd\u001b[0m /home/js/.npm/graceful-fs/4\u001b[K\r"
+    ],
+    [
+      0.050644,
+      "[\u001b[7m       \u001b[27m\u001b[90m...........\u001b[0m] | fetchMetadata: \u001b[34;40mverb\u001b[0m \u001b[35mafterAdd\u001b[0m /home/js/.npm/graceful-fs/4\u001b[K\r"
+    ],
+    [
+      0.050046,
+      "[\u001b[7m       \u001b[27m\u001b[90m...........\u001b[0m] - fetchMetadata: \u001b[34;40mverb\u001b[0m \u001b[35mafterAdd\u001b[0m /home/js/.npm/graceful-fs/4\u001b[K\r"
+    ],
+    [
+      0.050493,
+      "[\u001b[7m       \u001b[27m\u001b[90m...........\u001b[0m] / fetchMetadata: \u001b[34;40mverb\u001b[0m \u001b[35mafterAdd\u001b[0m /home/js/.npm/is-obj/1.0.1/\u001b[K\r"
+    ],
+    [
+      0.050555,
+      "[\u001b[7m       \u001b[27m\u001b[90m...........\u001b[0m] \\ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049782,
+      "[\u001b[7m       \u001b[27m\u001b[90m...........\u001b[0m] | fetchMetadata: \u001b[34;40mverb\u001b[0m \u001b[35mafterAdd\u001b[0m /home/js/.npm/slide/1.1.6/p\u001b[K\r"
+    ],
+    [
+      0.05074,
+      "[\u001b[7m       \u001b[27m\u001b[90m...........\u001b[0m] - fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050442,
+      "[\u001b[7m       \u001b[27m\u001b[90m...........\u001b[0m] | fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.052966,
+      "[\u001b[7m       \u001b[27m\u001b[90m...........\u001b[0m] - fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049325,
+      "[\u001b[7m       \u001b[27m\u001b[90m...........\u001b[0m] / fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.051012,
+      "[\u001b[7m       \u001b[27m\u001b[90m...........\u001b[0m] | fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050167,
+      "[\u001b[7m       \u001b[27m\u001b[90m...........\u001b[0m] - fetchMetadata: \u001b[34;40mverb\u001b[0m \u001b[35mafterAdd\u001b[0m /home/js/.npm/lowercase-key\u001b[K\r"
+    ],
+    [
+      0.054075,
+      "[\u001b[7m       \u001b[27m\u001b[90m...........\u001b[0m] - fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050921,
+      "[\u001b[7m       \u001b[27m\u001b[90m...........\u001b[0m] | fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.050585,
+      "[\u001b[7m       \u001b[27m\u001b[90m...........\u001b[0m] | fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.05108,
+      "[\u001b[7m       \u001b[27m\u001b[90m...........\u001b[0m] | fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.048728,
+      "[\u001b[7m       \u001b[27m\u001b[90m...........\u001b[0m] | fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.051803,
+      "[\u001b[7m       \u001b[27m\u001b[90m...........\u001b[0m] / fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.047774,
+      "[\u001b[7m       \u001b[27m\u001b[90m...........\u001b[0m] / fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.051123,
+      "[\u001b[7m       \u001b[27m\u001b[90m...........\u001b[0m] / fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mmapToRegistry\u001b[0m uri https://registry.n\u001b[K\r"
+    ],
+    [
+      0.049443,
+      "[\u001b[7m       \u001b[27m\u001b[90m...........\u001b[0m] - fetchMetadata: \u001b[34;40mverb\u001b[0m \u001b[35mafterAdd\u001b[0m /home/js/.npm/process-nexti\u001b[K\r"
+    ],
+    [
+      0.049605,
+      "[\u001b[7m       \u001b[27m\u001b[90m...........\u001b[0m] - fetchMetadata: \u001b[34;40mverb\u001b[0m \u001b[35mafterAdd\u001b[0m /home/js/.npm/process-nexti\u001b[K\r"
+    ],
+    [
+      0.050174,
+      "[\u001b[7m       \u001b[27m\u001b[90m...........\u001b[0m] \\ fetchMetadata: \u001b[34;40mverb\u001b[0m \u001b[35mafterAdd\u001b[0m /home/js/.npm/error-ex/1.3.\u001b[K\r"
+    ],
+    [
+      0.049515,
+      "[\u001b[7m       \u001b[27m\u001b[90m...........\u001b[0m] \\ fetchMetadata: \u001b[34;40mverb\u001b[0m \u001b[35mafterAdd\u001b[0m /home/js/.npm/error-ex/1.3.\u001b[K\r"
+    ],
+    [
+      0.051223,
+      "[\u001b[7m       \u001b[27m\u001b[90m...........\u001b[0m] \\ fetchMetadata: \u001b[34;40mverb\u001b[0m \u001b[35mafterAdd\u001b[0m /home/js/.npm/error-ex/1.3.\u001b[K\r"
+    ],
+    [
+      0.049677,
+      "[\u001b[7m       \u001b[27m\u001b[90m...........\u001b[0m] | fetchMetadata: \u001b[34;40mverb\u001b[0m \u001b[35mafterAdd\u001b[0m /home/js/.npm/is-arrayish/0\u001b[K\r"
+    ],
+    [
+      0.050717,
+      "[\u001b[7m       \u001b[27m\u001b[90m...........\u001b[0m] | fetchMetadata: \u001b[34;40mverb\u001b[0m \u001b[35mafterAdd\u001b[0m /home/js/.npm/is-arrayish/0\u001b[K\r"
+    ],
+    [
+      0.049718,
+      "[\u001b[7m       \u001b[27m\u001b[90m...........\u001b[0m] | fetchMetadata: \u001b[34;40mverb\u001b[0m \u001b[35mafterAdd\u001b[0m /home/js/.npm/is-arrayish/0\u001b[K\r"
+    ],
+    [
+      0.050812,
+      "[\u001b[7m       \u001b[27m\u001b[90m...........\u001b[0m] / fetchMetadata: \u001b[34;40mverb\u001b[0m \u001b[35mafterAdd\u001b[0m /home/js/.npm/prepend-http/\u001b[K\r"
+    ],
+    [
+      0.050981,
+      "[\u001b[7m       \u001b[27m\u001b[90m...........\u001b[0m] / fetchMetadata: \u001b[34;40mverb\u001b[0m \u001b[35mafterAdd\u001b[0m /home/js/.npm/prepend-http/\u001b[K\r"
+    ],
+    [
+      0.049223,
+      "[\u001b[7m       \u001b[27m\u001b[90m...........\u001b[0m] \\ fetchMetadata: \u001b[34;40mverb\u001b[0m \u001b[35mafterAdd\u001b[0m /home/js/.npm/prepend-http/\u001b[K\r"
+    ],
+    [
+      0.050516,
+      "[\u001b[7m       \u001b[27m\u001b[90m...........\u001b[0m] | fetchMetadata: \u001b[34;40mverb\u001b[0m \u001b[35mcache add\u001b[0m spec minimist@^1.2.0\u001b[K\r"
+    ],
+    [
+      0.049779,
+      "[\u001b[7m       \u001b[27m\u001b[90m...........\u001b[0m] | fetchMetadata: \u001b[34;40mverb\u001b[0m \u001b[35mcache add\u001b[0m spec minimist@^1.2.0\u001b[K\r"
+    ],
+    [
+      0.049918,
+      "[\u001b[7m          \u001b[27m\u001b[90m........\u001b[0m] - diffTrees: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m generateActionsToTake\u001b[K\r"
+    ],
+    [
+      0.049042,
+      "[\u001b[7m             \u001b[27m\u001b[90m.....\u001b[0m] \\ extract:cloudfn-cli: \u001b[7msill\u001b[0m \u001b[35mdoParallel\u001b[0m extract 1\u001b[K\r"
+    ],
+    [
+      0.03502,
+      "\r\u001b[K\u001b[?25h"
+    ],
+    [
+      0.001424,
+      "/usr/bin/cfn -> /usr/lib/node_modules/cloudfn-cli/bin/cfn\r\n"
+    ],
+    [
+      0.000126,
+      "/usr/bin/cloudfn -> /usr/lib/node_modules/cloudfn-cli/bin/cfn\r\n"
+    ],
+    [
+      0.055145,
+      "/usr/lib\r\n`-- \u001b[40m\u001b[33mcloudfn-cli@0.1.21\u001b[39m\u001b[49m \r\n\r\n"
+    ],
+    [
+      0.010738,
+      "\u001b]0;js@ops-xps: ~/repos/cloudfn-cli\u0007\u001b[01;32mjs\u001b[01;34m ➜ \u001b[00m "
+    ],
+    [
+      1.83544,
+      "c"
+    ],
+    [
+      0.179619,
+      "f"
+    ],
+    [
+      0.085432,
+      "n"
+    ],
+    [
+      0.159829,
+      " "
+    ],
+    [
+      0.364887,
+      "v"
+    ],
+    [
+      0.452069,
+      "e"
+    ],
+    [
+      0.548691,
+      "r"
+    ],
+    [
+      1.114632,
+      "s"
+    ],
+    [
+      0.107018,
+      "i"
+    ],
+    [
+      0.069585,
+      "o"
+    ],
+    [
+      0.192565,
+      "n"
+    ],
+    [
+      0.341237,
+      "\r\n"
+    ],
+    [
+      0.218434,
+      "Using lib.cloudfn v.0.0.2 Debug: false, remote: https://cloudfn.stream\r\n"
+    ],
+    [
+      0.003542,
+      "cloudfn-cli v.0.1.21, using lib.cloudfn 0.0.2\r\n"
+    ],
+    [
+      0.002263,
+      "\u001b]0;js@ops-xps: ~/repos/cloudfn-cli\u0007\u001b[01;32mjs\u001b[01;34m ➜ \u001b[00m "
+    ],
+    [
+      6.720705,
+      "v"
+    ],
+    [
+      0.066177,
+      "i"
+    ],
+    [
+      0.199859,
+      "m"
+    ],
+    [
+      0.103723,
+      " "
+    ],
+    [
+      0.697726,
+      "h"
+    ],
+    [
+      0.125283,
+      "e"
+    ],
+    [
+      0.202418,
+      "l"
+    ],
+    [
+      0.234889,
+      "o"
+    ],
+    [
+      0.124855,
+      "\u0007"
+    ],
+    [
+      0.479016,
+      "\b\u001b[K"
+    ],
+    [
+      0.186346,
+      "l"
+    ],
+    [
+      0.219367,
+      "o"
+    ],
+    [
+      0.556966,
+      "w"
+    ],
+    [
+      0.074548,
+      "o"
+    ],
+    [
+      0.122994,
+      "r"
+    ],
+    [
+      0.097436,
+      "l"
+    ],
+    [
+      0.148017,
+      "d"
+    ],
+    [
+      0.184972,
+      "."
+    ],
+    [
+      0.420275,
+      "s"
+    ],
+    [
+      1.604729,
+      "\b\u001b[K"
+    ],
+    [
+      0.148314,
+      "\b\u001b[K"
+    ],
+    [
+      0.154184,
+      "\b\u001b[K"
+    ],
+    [
+      0.147922,
+      "\b\u001b[K"
+    ],
+    [
+      0.15336,
+      "\b\u001b[K"
+    ],
+    [
+      0.160236,
+      "\b\u001b[K"
+    ],
+    [
+      0.142245,
+      "\b\u001b[K"
+    ],
+    [
+      1.043325,
+      "."
+    ],
+    [
+      0.387261,
+      "j"
+    ],
+    [
+      0.204451,
+      "s"
+    ],
+    [
+      1.126083,
+      "\r\n"
+    ],
+    [
+      0.028581,
+      "\u001b[?1049h\u001b[?1h\u001b=\u001b[2;1H▽\u001b[6n\u001b[2;1H  \u001b[1;1H\u001b]11;?\u0007"
+    ],
+    [
+      0.000347,
+      "\u001b[1;19r\u001b[?12;25h\u001b[?12l\u001b[?25h\u001b[27m\u001b[23m\u001b[m\u001b[H\u001b[2J\u001b[?25l\u001b[19;1H\"hello.js\" [New File]"
+    ],
+    [
+      0.001558,
+      "\u001b[>c"
+    ],
+    [
+      0.000283,
+      "\u001b[2;1H\u001b[94m~                                                                               \u001b[3;1H~                                                                               \u001b[4;1H~                                                                               \u001b[5;1H~                                                                               \u001b[6;1H~                                                                               \u001b[7;1H~                                                                               \u001b[8;1H~                                                                               \u001b[9;1H~                                                                               \u001b[10;1H~                                                                               \u001b[11;1H~                                                                               \u001b[12;1H~                                                                               \u001b[13;1H~                                                              "
+    ],
+    [
+      1.6e-05,
+      "                 \u001b[14;1H~                                                                               \u001b[15;1H~                                                                               \u001b[16;1H~                                                                               \u001b[17;1H~                                                                               \u001b[18;1H~                                                                               \u001b[m\u001b[19;63H0,0-1\u001b[9CAll\u001b[1;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.029901,
+      "\u001b[27m\u001b[23m\u001b[m\u001b[H\u001b[2J\u001b[?25l\u001b[2;1H\u001b[94m~                                                                               \u001b[3;1H~                                                                               \u001b[4;1H~                                                                               \u001b[5;1H~                                                                               \u001b[6;1H~                                                                               \u001b[7;1H~                                                                               \u001b[8;1H~                                                                               \u001b[9;1H~                                                                               \u001b[10;1H~                                                                               \u001b[11;1H~                                                                               \u001b[12;1H~                                                                               \u001b[13;1H~                                    "
+    ],
+    [
+      3.6e-05,
+      "                                           \u001b[14;1H~                                                                               \u001b[15;1H~                                                                               \u001b[16;1H~                                                                               \u001b[17;1H~                                                                               \u001b[18;1H~                                                                               \u001b[m\u001b[19;63H0,0-1\u001b[9CAll\r\"hello.js\" [New File]\u001b[1;1H\u001bP+q436f\u001b\\\u001bP+q6b75\u001b\\\u001bP+q6b64\u001b\\\u001bP+q6b72\u001b\\\u001bP+q6b6c\u001b\\\u001bP+q2332\u001b\\\u001bP+q2334\u001b\\\u001bP+q2569\u001b\\\u001bP+q2a37\u001b\\\u001bP+q6b31\u001b\\\u001b[?12l\u001b[?25h"
+    ],
+    [
+      1.889038,
+      "\u001b[?25l\u001b[19;1H\u001b[1m-- INSERT --\u001b[m\u001b[19;13H\u001b[K\u001b[19;63H0,1\u001b[11CAll\u001b[1;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.249852,
+      "\u001b[?25l(\u001b[19;63H1,2\u001b[1;2H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.370762,
+      "\u001b[?25la\u001b[19;65H3\u001b[1;3H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.087092,
+      "\u001b[?25lp\u001b[19;65H4\u001b[1;4H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.090114,
+      "\u001b[?25li\u001b[19;65H5\u001b[1;5H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.766634,
+      "\u001b[?25l)\r\u001b[46m(\u001b[mapi\u001b[46m)\u001b[m\u001b[19;65H6\u001b[1;6H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.154949,
+      "\u001b[?25l\r(api)\u001b[19;65H7\u001b[1;7H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.714112,
+      "\u001b[?25l>\u001b[19;65H8\u001b[1;8H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.432303,
+      "\u001b[?25l\u001b[1;7H\u001b[K\u001b[19;65H7\u001b[1;7H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.222922,
+      "\u001b[?25l=\u001b[19;65H8\u001b[1;8H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.090663,
+      "\u001b[?25l>\u001b[19;65H9\u001b[1;9H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.192552,
+      "\u001b[?25l\u001b[19;65H10\u001b[1;10H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.721836,
+      "\u001b[?25l\u001b[1m\u001b[96m{\u001b[m\u001b[19;66H1\u001b[1;11H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.84335,
+      "\u001b[?25l\u001b[2;1H\u001b[K\u001b[19;63H2,1 \u001b[2;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.305304,
+      "\u001b[?25l\u001b[3;1H\u001b[K\u001b[19;63H3\u001b[3;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.239435,
+      "\u001b[?25l\u001b[4;1H\u001b[K\u001b[19;63H4\u001b[4;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.587595,
+      "\u001b[?25l\u001b[1m\u001b[96m}\u001b[m\u001b[1;10H\u001b[1m\u001b[96m\u001b[46m{\r\n\r\n\r\n}\u001b[m\u001b[19;65H2\u001b[4;2H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.397905,
+      "\u001b[?25l\u001b[1;10H\u001b[1m\u001b[96m{\r\n\r\n\r\n}\u001b[m\u001b[19;63H3,1\u001b[3;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.771192,
+      "\u001b[?25l\u001b[19;63H2\u001b[2;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.300149,
+      "\u001b[?25l\u001b[19;65H2\u001b[2;2H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.12126,
+      "\u001b[?25l\u001b[19;65H3\u001b[2;3H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      1.011063,
+      "\u001b[?25la\u001b[19;65H4\u001b[2;4H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.058321,
+      "\u001b[?25lp\u001b[19;65H5\u001b[2;5H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.078425,
+      "\u001b[?25li\u001b[19;65H6\u001b[2;6H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.23421,
+      "\u001b[?25l.\u001b[19;65H7\u001b[2;7H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.164623,
+      "\u001b[?25ls\u001b[19;65H8\u001b[2;8H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.154088,
+      "\u001b[?25le\u001b[19;65H9\u001b[2;9H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.119378,
+      "\u001b[?25ln\u001b[19;65H10\u001b[2;10H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.104909,
+      "\u001b[?25ld\u001b[19;66H1\u001b[2;11H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      1.166698,
+      "\u001b[?25l(\u001b[19;66H2\u001b[2;12H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.437963,
+      "\u001b[?25l\u001b[95m'\u001b[m\u001b[19;66H3\u001b[2;13H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.771901,
+      "\u001b[?25l\u001b[95mH\u001b[m\u001b[19;66H4\u001b[2;14H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.154547,
+      "\u001b[?25l\u001b[95me\u001b[m\u001b[19;66H5\u001b[2;15H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.133381,
+      "\u001b[?25l\u001b[95ml\u001b[m\u001b[19;66H6\u001b[2;16H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.134879,
+      "\u001b[?25l\u001b[95ml\u001b[m\u001b[19;66H7\u001b[2;17H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.172856,
+      "\u001b[?25l\u001b[95mo\u001b[m\u001b[19;66H8\u001b[2;18H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.217436,
+      "\u001b[?25l\u001b[95m \u001b[m\u001b[19;66H9\u001b[2;19H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.44481,
+      "\u001b[?25l\u001b[95mw\u001b[m\u001b[19;65H20\u001b[2;20H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.480316,
+      "\u001b[?25l\u001b[95mo\u001b[m\u001b[19;66H1\u001b[2;21H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.297359,
+      "\u001b[?25l\u001b[95mr\u001b[m\u001b[19;66H2\u001b[2;22H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.170637,
+      "\u001b[?25l\u001b[95ml\u001b[m\u001b[19;66H3\u001b[2;23H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.177488,
+      "\u001b[?25l\u001b[95md\u001b[m\u001b[19;66H4\u001b[2;24H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      1.223701,
+      "\u001b[?25l\u001b[95m'\u001b[m\u001b[19;66H5\u001b[2;25H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.445355,
+      "\u001b[?25l)\u001b[2;11H\u001b[46m(\u001b[13C)\u001b[m\u001b[19;66H6\u001b[2;26H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.725791,
+      "\u001b[?25l;\u001b[2;11H(\u001b[13C)\u001b[19;66H7\u001b[2;27H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      1.416888,
+      "\u001b[?25l\u001b[2;18r\u001b[18;1H\r\n\u001b[1;19r\u001b[2;3Hapi.send(\u001b[95m'Hello world'\u001b[m);\u001b[18;1H\u001b[94m~                                                                               "
+    ],
+    [
+      0.000249,
+      "\u001b[m\u001b[19;63H\u001b[K\u001b[19;63H2,27\u001b[10CAll\u001b[2;27H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      1.513716,
+      "\u001b[19;1H\u001b[K\u001b[2;26H"
+    ],
+    [
+      0.123729,
+      "\u001b[?25l"
+    ],
+    [
+      0.000139,
+      "\u001b[19;63H2,26\u001b[10CAll\u001b[2;26H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.84301,
+      "\u0007\u001b[?25l\u001b[19;63H\u001b[K\u001b[19;1H:\u001b[?12l\u001b[?25h"
+    ],
+    [
+      1.131634,
+      "w\u001b[?25l\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.056014,
+      "q\u001b[?25l\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.79058,
+      "\r"
+    ],
+    [
+      2.1e-05,
+      "\u001b[?25l"
+    ],
+    [
+      7.7e-05,
+      "\"hello.js\""
+    ],
+    [
+      0.004627,
+      " [New] 3L, 40C written"
+    ],
+    [
+      0.000296,
+      "\r\r\r\n\u001b[?1l\u001b>\u001b[?12l\u001b[?25h\u001b[?1049l"
+    ],
+    [
+      0.00058,
+      "\u001b]0;js@ops-xps: ~/repos/cloudfn-cli\u0007\u001b[01;32mjs\u001b[01;34m ➜ \u001b[00m "
+    ],
+    [
+      1.436564,
+      "c"
+    ],
+    [
+      0.658524,
+      "f"
+    ],
+    [
+      0.076207,
+      "n"
+    ],
+    [
+      0.194225,
+      " "
+    ],
+    [
+      0.454407,
+      "u"
+    ],
+    [
+      0.087528,
+      "s"
+    ],
+    [
+      0.201766,
+      "e"
+    ],
+    [
+      0.064674,
+      "r"
+    ],
+    [
+      0.850307,
+      "\r\n"
+    ],
+    [
+      0.222962,
+      "Using lib.cloudfn v.0.0.2 Debug: false, remote: https://cloudfn.stream\r\n"
+    ],
+    [
+      0.008668,
+      "\u001b[1G"
+    ],
+    [
+      3.7e-05,
+      "\u001b[0J"
+    ],
+    [
+      5.4e-05,
+      "username: (test) "
+    ],
+    [
+      5.1e-05,
+      "\u001b[18G"
+    ],
+    [
+      2.175669,
+      "\r\r\n"
+    ],
+    [
+      0.004396,
+      "\u001b[1G\u001b[0Jemail: (js@base.io) \u001b[21G"
+    ],
+    [
+      0.898834,
+      "\r\r\n"
+    ],
+    [
+      0.002567,
+      "\u001b[1G\u001b[0Jpassword: \u001b[11G"
+    ],
+    [
+      1.174736,
+      "*"
+    ],
+    [
+      0.063194,
+      "*"
+    ],
+    [
+      0.273517,
+      "*"
+    ],
+    [
+      0.05578,
+      "*"
+    ],
+    [
+      0.268851,
+      "*"
+    ],
+    [
+      0.084681,
+      "*"
+    ],
+    [
+      0.413751,
+      "\r\r\n"
+    ],
+    [
+      2.7e-05,
+      "\r\r\n"
+    ],
+    [
+      0.283283,
+      "Credentials verified. Now using account '\u001b[32mtest\u001b[39m'\r\n"
+    ],
+    [
+      0.004226,
+      "\u001b]0;js@ops-xps: ~/repos/cloudfn-cli\u0007\u001b[01;32mjs\u001b[01;34m ➜ \u001b[00m "
+    ],
+    [
+      2.73016,
+      "c"
+    ],
+    [
+      0.156137,
+      "f"
+    ],
+    [
+      0.154956,
+      "n"
+    ],
+    [
+      0.110029,
+      "n"
+    ],
+    [
+      0.117292,
+      " "
+    ],
+    [
+      0.424188,
+      "\b\u001b[K"
+    ],
+    [
+      0.142384,
+      "\b\u001b[K"
+    ],
+    [
+      0.152163,
+      " "
+    ],
+    [
+      0.170266,
+      "a"
+    ],
+    [
+      0.163534,
+      "d"
+    ],
+    [
+      0.147415,
+      "d"
+    ],
+    [
+      0.104292,
+      " "
+    ],
+    [
+      0.241609,
+      "h"
+    ],
+    [
+      0.050672,
+      "e"
+    ],
+    [
+      0.223372,
+      "l"
+    ],
+    [
+      0.155664,
+      "l"
+    ],
+    [
+      0.127031,
+      "o"
+    ],
+    [
+      0.776201,
+      "."
+    ],
+    [
+      0.228183,
+      "js "
+    ],
+    [
+      1.601337,
+      "\r\n"
+    ],
+    [
+      0.214351,
+      "Using lib.cloudfn v.0.0.2 Debug: false, remote: https://cloudfn.stream\r\n"
+    ],
+    [
+      0.00897,
+      "\u001b[1G"
+    ],
+    [
+      3.2e-05,
+      "\u001b[0J"
+    ],
+    [
+      9.3e-05,
+      "\u001b[32mPassword for user '\u001b[37mtest\u001b[32m'\u001b[39m: \u001b[27G"
+    ],
+    [
+      1.368467,
+      "*"
+    ],
+    [
+      0.075582,
+      "*"
+    ],
+    [
+      0.245945,
+      "*"
+    ],
+    [
+      0.06954,
+      "*"
+    ],
+    [
+      0.245034,
+      "*"
+    ],
+    [
+      0.062439,
+      "*"
+    ],
+    [
+      1.040087,
+      "\r\r\n"
+    ],
+    [
+      0.000139,
+      "\r\r\n"
+    ],
+    [
+      0.005997,
+      "@add url https://cloudfn.stream/@/a/test/497355aa987d50a6b060095c9ba217c1db6095f1ea34aa0fa8e5ea338a46a7f4\r\n"
+    ],
+    [
+      0.00101,
+      "\u001b[32mAdding \u001b[39m\u001b[34mhello.js\u001b[39m to server...\r\n"
+    ],
+    [
+      0.374067,
+      "\u001b[32mSuccess\u001b[39m Script available @ https://cloudfn.stream/test/hello\r\n"
+    ],
+    [
+      0.002602,
+      "\u001b]0;js@ops-xps: ~/repos/cloudfn-cli\u0007\u001b[01;32mjs\u001b[01;34m ➜ \u001b[00m "
+    ],
+    [
+      4.607248,
+      "c"
+    ],
+    [
+      0.230977,
+      "f"
+    ],
+    [
+      0.100069,
+      "n"
+    ],
+    [
+      0.164447,
+      " "
+    ],
+    [
+      0.48716,
+      "c"
+    ],
+    [
+      0.468391,
+      "a"
+    ],
+    [
+      0.250901,
+      "l"
+    ],
+    [
+      0.13289,
+      "l"
+    ],
+    [
+      0.307371,
+      " "
+    ],
+    [
+      1.354757,
+      "t"
+    ],
+    [
+      0.03662,
+      "e"
+    ],
+    [
+      0.203137,
+      "s"
+    ],
+    [
+      0.070925,
+      "t"
+    ],
+    [
+      0.258254,
+      "/"
+    ],
+    [
+      0.924047,
+      "h"
+    ],
+    [
+      0.244843,
+      "e"
+    ],
+    [
+      0.228505,
+      "l"
+    ],
+    [
+      0.128255,
+      "l"
+    ],
+    [
+      0.163805,
+      "o"
+    ],
+    [
+      0.605212,
+      "\r\n"
+    ],
+    [
+      0.214755,
+      "Using lib.cloudfn v.0.0.2 Debug: false, remote: https://cloudfn.stream\r\n"
+    ],
+    [
+      0.003644,
+      "@call url https://cloudfn.stream/test/hello\r\n"
+    ],
+    [
+      0.346566,
+      "Hello world\r\n"
+    ],
+    [
+      0.002577,
+      "\u001b]0;js@ops-xps: ~/repos/cloudfn-cli\u0007\u001b[01;32mjs\u001b[01;34m ➜ \u001b[00m "
+    ],
+    [
+      1.953079,
+      "h"
+    ],
+    [
+      0.124363,
+      "t"
+    ],
+    [
+      0.174243,
+      "t"
+    ],
+    [
+      0.176627,
+      "p"
+    ],
+    [
+      1.242996,
+      " "
+    ],
+    [
+      9.141427,
+      "htt"
+    ],
+    [
+      1.8e-05,
+      "ps"
+    ],
+    [
+      1.6e-05,
+      ":"
+    ],
+    [
+      8.9e-05,
+      "//cl"
+    ],
+    [
+      1.8e-05,
+      "o"
+    ],
+    [
+      1.4e-05,
+      "u"
+    ],
+    [
+      2.7e-05,
+      "d"
+    ],
+    [
+      2.3e-05,
+      "f"
+    ],
+    [
+      2.4e-05,
+      "n"
+    ],
+    [
+      2.5e-05,
+      "."
+    ],
+    [
+      2.3e-05,
+      "s"
+    ],
+    [
+      2.3e-05,
+      "t"
+    ],
+    [
+      2.3e-05,
+      "r"
+    ],
+    [
+      2.5e-05,
+      "e"
+    ],
+    [
+      2.4e-05,
+      "a"
+    ],
+    [
+      2.5e-05,
+      "m"
+    ],
+    [
+      2.4e-05,
+      "/"
+    ],
+    [
+      2.6e-05,
+      "t"
+    ],
+    [
+      2.4e-05,
+      "e"
+    ],
+    [
+      2.7e-05,
+      "s"
+    ],
+    [
+      2.5e-05,
+      "t"
+    ],
+    [
+      3.2e-05,
+      "/"
+    ],
+    [
+      1.7e-05,
+      "h"
+    ],
+    [
+      3.5e-05,
+      "e"
+    ],
+    [
+      2.5e-05,
+      "l"
+    ],
+    [
+      2.8e-05,
+      "l"
+    ],
+    [
+      2.6e-05,
+      "o"
+    ],
+    [
+      1.440461,
+      "\r\n"
+    ],
+    [
+      0.414178,
+      "\u001b[38;5;33mHTTP\u001b[39m\u001b[38;5;245m/\u001b[39m\u001b[38;5;37m1.1\u001b[39m\u001b[38;5;245m \u001b[39m\u001b[38;5;37m200\u001b[39m\u001b[38;5;245m \u001b[39m\u001b[38;5;136mOK\u001b[39m\r\n\u001b[38;5;245mAccess-Control-Allow-Headers\u001b[39m\u001b[38;5;245m:\u001b[39m\u001b[38;5;245m \u001b[39m\u001b[38;5;37mDNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type\u001b[39m\r\n\u001b[38;5;245mAccess-Control-Allow-Methods\u001b[39m\u001b[38;5;245m:\u001b[39m\u001b[38;5;245m \u001b[39m\u001b[38;5;37mGET, POST, OPTIONS\u001b[39m\r\n\u001b[38;5;245mAccess-Control-Allow-Origin\u001b[39m\u001b[38;5;245m:\u001b[39m\u001b[38;5;245m \u001b[39m\u001b[38;5;37m*\u001b[39m\r\n\u001b[38;5;245mAccess-Control-Allow-Origin\u001b[39m\u001b[38;5;245m:\u001b[39m\u001b[38;5;245m \u001b[39m\u001b[38;5;37m*\u001b[39m\r\n\u001b[38;5;245mConnection\u001b[39m\u001b[38;5;245m:\u001b[39m\u001b[38;5;245m \u001b[39m\u001b[38;5;37mkeep-alive\u001b[39m\r\n\u001b[38;5;245mContent-Length\u001b[39m\u001b[38;5;245m:\u001b[39m\u001b[38;5;245m \u001b[39m\u001b[38;5;37m11\u001b[39m\r\n\u001b[38;5;245mContent-Type\u001b[39m\u001b[38;5;245m:\u001b[39m\u001b[38;5;245m \u001b[39m\u001b[38;5;37mtext/html; charset=utf-8\u001b[39m\r\n\u001b[38;5;245mDate\u001b[39m\u001b[38;5;245m:\u001b[39m\u001b[38;5;245m \u001b[39m\u001b[38;5;37mWed, 14 Dec 2016 19:36:18 GMT\u001b[39m\r\n\u001b[38;5;245mETag\u001b[39m\u001b[38;"
+    ],
+    [
+      3e-05,
+      "5;245m:\u001b[39m\u001b[38;5;245m \u001b[39m\u001b[38;5;37mW/\"b-PiWWCnnbxptnTNTsZ6csYg\"\u001b[39m\r\n\u001b[38;5;245mServer\u001b[39m\u001b[38;5;245m:\u001b[39m\u001b[38;5;245m \u001b[39m\u001b[38;5;37mnginx\u001b[39m\r\r\n\r\r\n"
+    ],
+    [
+      0.004803,
+      "\u001b[38;5;245mHello world\u001b[39m\r\n\r\n"
+    ],
+    [
+      0.020172,
+      "\u001b]0;js@ops-xps: ~/repos/cloudfn-cli\u0007\u001b[01;32mjs\u001b[01;34m ➜ \u001b[00m "
+    ]
+  ],
+  "command": null,
+  "title": null,
+  "duration": 130.489281,
+  "env": {
+    "SHELL": "/bin/bash",
+    "TERM": "xterm-256color"
+  },
+  "width": 80
+}

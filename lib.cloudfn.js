@@ -13,8 +13,6 @@ const path 			= require('path');
 const util 			= require('util');
 
 
-
-
 module.exports.version = () => VERSION;
 
 /// This script is shared between the CLI- and Server-app - ALWAYS work on the file in cloudfn-system repo,
@@ -511,8 +509,7 @@ const Plugins = {
 
 	load_extended: () => {
 		Plugins.default.request	= require( PLUGINSDIRECTORY +'/default/request.js');
-
-
+		Plugins.default.expect	= require( PLUGINSDIRECTORY +'/default/expect.js');
 	},
 
 	list: () => {

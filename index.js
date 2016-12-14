@@ -20,7 +20,13 @@ var debug 		= true;
 var remote  	= 'http://localhost:3033';
 //var remote  	= 'http://cloudfn.stream';
 
-updateNote({pkg}).notify();
+updateNote({
+	pkg,
+	//updateCheckInterval: 1000 * 60 * 60 * 24 * 7 // 1 week
+	updateCheckInterval: 1000 * 60 * 5 // 5 minutes
+}).notify();
+
+
 
 var cloudfn 	= null;
 try {
@@ -39,7 +45,7 @@ try {
 }
 //if( !cloudfn ) cloudfn = require('./lib.cloudfn.js');
 
-console.log("Using lib.cloudfn v."+ cloudfn.version() +" Debug: "+ debug +", remote:", remote);
+//console.log("Using lib.cloudfn v."+ cloudfn.version() +" Debug: "+ debug +", remote:", remote);
 
 cloudfn.plugins.load();
 cloudfn.users.cli.load();

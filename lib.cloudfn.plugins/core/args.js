@@ -79,7 +79,7 @@ module.exports = function(req){
 	//args.origin = 'https://cloudfn.github.io/website/'; // test
 	args.origin = (args.headers.referer)
 		? args.headers.referer
-		: '';
+		: 'localhost';
 
 	//good. Now, combine all user-provided args to args.data
 	var collection = Object.assign({}, args.query, args.params, args.fields, args.body, args.files);
