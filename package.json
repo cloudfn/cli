@@ -32,7 +32,6 @@
     "update-notifier": "^1.0.3"
   },
   "preferGlobal": true,
-  "readme": "README.md",
   "repository": {
     "type": "git",
     "url": "git://github.com/cloudfn/cli.git"
