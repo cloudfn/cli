@@ -1,6 +1,6 @@
 {
   "name": "clfn",
-  "version": "0.1.23",
+  "version": "0.1.24",
   "description": "command-line interface to the cloudfn service",
   "main": "index.js",
   "keywords": [
@@ -11,7 +11,9 @@
   ],
   "author": "Jørgen Skogmo <js@base.io> (http://base.io/)",
   "license": "MIT",
-  "engines" : { "node" : ">=6.9.1" },
+  "engines": {
+    "node": ">=6.9.1"
+  },
   "dependencies": {
     "body-parser": "^1.15.2",
     "chalk": "^1.1.3",
