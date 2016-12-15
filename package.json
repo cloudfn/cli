@@ -1,15 +1,17 @@
 {
-  "name": "cloudfn-cli",
+  "name": "clfn",
   "version": "0.1.23",
   "description": "command-line interface to the cloudfn service",
   "main": "index.js",
   "keywords": [
     "cloudfn",
     "cli",
+    "clfn",
     "faas"
   ],
   "author": "Jørgen Skogmo <js@base.io> (http://base.io/)",
   "license": "MIT",
+  "engines" : { "node" : ">=6.9.1" },
   "dependencies": {
     "body-parser": "^1.15.2",
     "chalk": "^1.1.3",
@@ -37,7 +39,6 @@
     "url": "https://github.com/cloudfn/cli/issues"
   },
   "bin": {
-    "cfn": "./bin/cfn",
-    "cloudfn": "./bin/cfn"
+    "clfn": "./bin/cfn"
   }
 }

@@ -10,7 +10,7 @@ module.exports = function(data){
 
 		console.log("@core.send", "sending jsonp");
 		this.res.set('Content-Type', 'text/javascript');
-		this.res.send( this.args.query.callback +'('+ JSON.stringify(data) +');');
+		this.res.send( this.args.callback +'('+ JSON.stringify(data) +');');
 
 	}else{
 

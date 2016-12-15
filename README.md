@@ -16,6 +16,7 @@ and call the resulting URL to get/set your data.
 ```
 (sudo) npm install cloudfn-cli -g
 ```
+You need [Node.js](https://nodejs.org) to do that.  
 
 This adds the `cfn` command to your `$PATH`  
 (actually an alias to /usr/bin/node_modules/cloudfn-cli/bin)  
