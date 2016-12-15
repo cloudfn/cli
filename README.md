@@ -14,13 +14,11 @@ and call the resulting URL to get/set your data.
 ## Installation
 
 ```
-(sudo) npm install cloudfn-cli -g
+(sudo) npm install clfn -g
 ```
 You need [Node.js](https://nodejs.org) to do that.  
 
-This adds the `cfn` command to your `$PATH`  
-(actually an alias to /usr/bin/node_modules/cloudfn-cli/bin)  
-so it's useable from anywhere.
+This adds the `clfn` command to your `$PATH` so it's useable from anywhere.
 
 #### Update
 
@@ -34,18 +32,18 @@ There will be a few... just `npm install` again.
   api.send('Hello World');
 }
 ```
-
-Or, in traditional javascript:
-
-```javascript
+```
+// or, with "traditional" notation:
 function(api) {
   api.send('Hello World');
 }
 ```
-All scripts should have this signature,  
-and all your code needs to live inside this closure.
 
-The [api]() argument is an object with a (growing) collection of methods you will use to interact with the your users.
+`!` All scripts should have this signature, and  
+`!` All your code needs to live inside this closure.
+
+The `api`  argument is an object with a (growing) collection of methods you will use to interact with the your users.  
+It is documented in the [API Documentation](docs/api.md)
 
 `api.send()` is one such method. If you prefer to speak JSON, just do.
 
@@ -66,7 +64,7 @@ The commandline is the primary means of interacting with the **cloudfn service**
 The basic interaction follows this pattern:
 
 ```
-$ cfn <command> <args>
+$ clfn <command> <args>
 ```
 
 ## Signup
@@ -74,7 +72,7 @@ $ cfn <command> <args>
 The first thing you want to do, is to signup.
 
 ```
-$ cfn user
+$ clfn user
 ```
 
 This will prompt for a  
@@ -100,10 +98,10 @@ Read our [privacy]() and [cli-authentication]() docs for additional details.
 #### Add
 
 ```
-$ cfn add <scriptfile>
+$ clfn add <scriptfile>
 ```
 
-e.g: `$ cfn add examples/hello.js`
+e.g: `$ clfn add examples/hello.js`
 
 Adds a script to the service, and return a URL you can "call" with HTTP(S) GET and POST requests.
 
@@ -125,10 +123,10 @@ and can be called like any other web api, or as a script:
 #### Test
 
 ```
-$ cfn test <scriptfile>
+$ clfn test <scriptfile>
 ```
 
-e.g: `$ cfn test examples/hello.js`
+e.g: `$ clfn test examples/hello.js`
 
 Compiles the script, to verify that it is ok.  
 (Note that some runtime features are not mock'ed in the CLI, so test with a `add`'ed script to fully assert functionality.)
@@ -136,7 +134,7 @@ Compiles the script, to verify that it is ok.
 #### List
 
 ```
-$ cfn ls
+$ clfn ls
 ```
 
 Will show wich script you have uploaded to your "account".
@@ -144,11 +142,11 @@ Will show wich script you have uploaded to your "account".
 #### Remove
 
 ```
-$ cfn rm <scriptname>
+$ clfn rm <scriptname>
 ```
 
 Remove (there's no undo) the script from your "account".  
-(Use a scriptname from `$ cfn ls`.)
+(Use a scriptname from `$ clfn ls`.)
 
 
 ## Utility Commands
@@ -158,14 +156,14 @@ For convenience, the cli includes some commands to make working with the cloudfn
 #### Call
 
 ```
-$ cfn call <scripturl> <args>
+$ clfn call <scripturl> <args>
 ```
 
 Issues a HTTP GET request to the <scripturl>.  
-e.g: `$ cfn call js/counter `
+e.g: `$ clfn call js/counter `
 
 You can provide key=value pairs as `args` if you want.   
-e.g. `$ cfn call examples/echo msg=hello`  
+e.g. `$ clfn call examples/echo msg=hello`  
 These will be available in `api.args.params` in your scripts.
 Check []()
 
@@ -175,7 +173,7 @@ Feel free to use [httpie](), [postman]() or [curl]() for commandline testing ins
 #### Token
 
 ```
-$ cfn token
+$ clfn token
 ```
 
 Generates a unique fairly random token suitable for use with the [auth]() feature.
