@@ -10,7 +10,7 @@
     "faas"
   ],
   "author": "Jørgen Skogmo <js@base.io> (http://base.io/)",
-  "license": "MIT",
+  "license": "UNLICENSED",
   "engines": {
     "node": ">=6.9.1"
   },

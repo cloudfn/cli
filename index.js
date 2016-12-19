@@ -98,6 +98,7 @@ var credentialFileLocations = [
 commander
   .version(pkg.name +" v."+ pkg.version +", using lib.cloudfn "+ cloudfn.version() )
   .option('add <scriptfile>' , 'Add scriptfile to the cloud', _add)
+  .option('addf <endpoint> <file>' , '(testing) Add file to the endpoint', _addf)
   .option('rm <function>', 'Remove function', _rm)
   .option('ls', 'List active functions', _ls)
   .option('user' , 'Account/Credentials management', _user)
@@ -125,6 +126,22 @@ function _call( endpoint ){
 }
 
 function _callp( endpoint ){
+
+	var url = remote + path.join('/', endpoint);
+	console.log('@call url', url);
+
+	request.post(url, (err, httpResponse, body) => {
+		if( err || !httpResponse ){
+			console.log( chalk.red("Network error"));
+			console.log(err, httpResponse);
+			return
+		}
+		console.log(body);
+	});
+}
+
+/// testing
+function _callf( endpoint ){
 
 	var url = remote + path.join('/', endpoint);
 	var data = {a:1,b:"two",c:0.5};
@@ -168,6 +185,44 @@ function _test(scriptfile, cb){
 /// Run local _test, and upload to server
 function _add( scriptfile ){
 	
+	var file = path.normalize(scriptfile);
+	var info = path.parse(file);
+
+	if( !cloudfn.utils.is_readable(file) )  return false;
+	if( !cloudfn.utils.is_javascript(file)) return false;
+
+	prepareSecureRequest( (userconfig, hash) => {
+
+		var url = [remote, '@', 'a', userconfig.username, hash].join('/');
+		console.log('@add url', url);
+
+		var formData = {file:fs.createReadStream( file ), name:info.name};
+
+		console.log( chalk.green("Adding ") + chalk.blue(file)+ " to server..." );
+
+		request.post({url:url, formData: formData}, (err, httpResponse, body) => {
+			parse_net_response(err, httpResponse, body, (body) => {
+				console.log('OK Server response:', body);
+				// TODO: Parse response to determine success
+				// TODO: Print test instructions (curl or httpie) 
+			});
+		});
+		
+	});
+}
+
+/// Run local _test, and upload to server
+function _addf( endpoint ){
+
+	var files = commander.rawArgs.slice(4);
+
+	console.log("_addf", "endpoint:", endpoint, "files:", files );
+
+	var app = endpoint.split('/')[1];
+	console.log('@addf app', app);
+	
+	return;
+
 	var file = path.normalize(scriptfile);
 	var info = path.parse(file);
 

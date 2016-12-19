@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<title>static</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+
+</head>
+<body>
+
+this is static/index.html<br>
+
+hits: <span id="counter">-</span>
+
+<script>
+function OnCallback(data){
+	console.log("OnCallback:", data.counter);
+	document.getElementById("counter").innerHTML = data.counter;
+}
+</script>
+<script src="https://cloudfn.stream/examples/static?callback=OnCallback"></script>
+
+</body>
+</html>

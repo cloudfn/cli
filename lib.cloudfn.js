@@ -1,6 +1,6 @@
 // js@base.io
 
-const VERSION 			= '0.0.3';
+const VERSION 			= '0.0.4';
 const TASKDIRECTORY 	= __dirname + '/tasks';
 const PLUGINSDIRECTORY 	= __dirname + '/lib.cloudfn.plugins';
 const USER_SCRIPT_LIFETIME = 4000;
@@ -233,6 +233,18 @@ const Store = {
 }
 module.exports.store = Store;
 
+
+/// Files
+
+const Files = {
+
+	add: (user, script, files, cb) => {
+		var filepath  = path.join(TASKDIRECTORY, user, script);
+		console.log("@files: add", files, " to ", filepath);
+		cb(true);
+	}
+}
+module.exports.files = Files;
 
 /// Tasks
 
