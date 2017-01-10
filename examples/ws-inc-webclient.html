@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>cloudfn test</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/reconnecting-websocket/1.0.0/reconnecting-websocket.min.js"></script>
+</head>
+<body>
+
+<div id="display" style="font-size: 48pt;">nan</div>
+
+<button id="b_inc" value="increment" /><br />
+
+<script type="text/javascript">
+
+var d = document.getElementById('display');
+var b = document.getElementById('b_inc');
+
+var ws_address = window.location.href.replace('https:', 'http:').replace('http:', 'ws:');
+console.log('connecting to ', ws_address);
+var ws = new ReconnectingWebSocket(ws_address);
+
+b.onclick = function(){
+	ws.send({action:'increment'});
+}
+
+ws.onmessage = function(event){
+	console.log('ws onmessage', event);
+}
+
+ws.onopen = function(){
+	console.log('ws onopen');
+}
+
+</script>
+</body>
+</html>
